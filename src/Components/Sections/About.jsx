@@ -21,7 +21,7 @@ const About = ({themeColor}) => {
                             Who am I anyway?
                         </Heading>
                         <Paragraph>
-                            Some details about myself, passions and coding ability goes here
+                            Some details about myself, <span className={`text-${themeColor}`}>passions</span> and coding ability goes here
                         </Paragraph>
                     </div>
                 </div>

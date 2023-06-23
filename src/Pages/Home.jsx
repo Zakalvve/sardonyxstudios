@@ -10,8 +10,8 @@ const Home = () => {
         <Layout>
             <main id="main">
                 <Hero/>
-                <About themeColor='neon-red'/>
-                <Projects themeColor='neon-green'/>
+                <About themeColor='neon-green'/>
+                <Projects themeColor='neon-red'/>
                 <Contact themeColor='neon-blue'/>
             </main>
         </Layout>
