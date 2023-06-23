@@ -1,0 +1,33 @@
+import Container from '../UI/Container';
+import ButtonLink from '../UI/ButtonLink';
+import { Caption, Heading, Paragraph } from '../UI/Text';
+import Image from '../UI/Image';
+import React from 'react';
+import itsMe from '../../Assets/me.jpg'
+
+const About = ({themeColor}) => {
+    return (
+        <section id='about' className='bg-space-600 relative z-10 flex min-h-screen w-full flex-col items-center lg:flex-row'>
+            <Image 
+                className='inset-0 max-h-screen w-full object-cover object-center lg:absolute lg:h-full lg:w-1/2' 
+                src={itsMe}
+                loading='lazy'
+            />
+            <Container>
+                <div className='w-full py-28 lg:flex'>
+                    <div className='lg:ml-auto lg:basis-1/2 lg:pl-10 xl:pl-20'>
+                        <Caption themeColor={{ theme: themeColor, color: 'red'}}>About</Caption>
+                        <Heading>
+                            Who am I anyway?
+                        </Heading>
+                        <Paragraph>
+                            Some details about myself, passions and coding ability goes here
+                        </Paragraph>
+                    </div>
+                </div>
+            </Container>
+        </section>
+    );
+}
+
+export default About;
