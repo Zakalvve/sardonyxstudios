@@ -31,7 +31,7 @@ const NavBar = ({isBackgroundTranhsparent = true}) => {
                                 <a
                                     key={index}
                                     href={link.href}
-                                    className="relative py-1 text-sm uppercase text-white"
+                                    className="relative underline underline-offset-4 decoration-transparent py-1 text-sm uppercase text-white transition-all duration-300 hover:decoration-white"
                                 >
                                     {link.label}
                                 </a>
