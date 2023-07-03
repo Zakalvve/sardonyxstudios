@@ -23,7 +23,7 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
       colors: {
-        primary: '#6919FF',
+        primary: '#30363d',
         'neon-green': '#7ee787',
         'neon-red': '#cb634f',
         'neon-purple': '#6a3bc4',
