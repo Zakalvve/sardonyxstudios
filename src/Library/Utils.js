@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import { z } from 'zod';
 import journalImage from '../Assets/mihaelas-journal.png';
 import letsGameImage from '../Assets/lets-game.png';
+import extremeSnakeImage from '../Assets/extreme-snake.png'
 
 export const reduceClasses = (...inputs) => {
     return twMerge(clsx(inputs));
@@ -74,4 +75,15 @@ export const projectsData = [
         github: 'https://github.com/Zakalvve/Lets-Game',
         site: ''
     },
+    {
+        name: 'Extreme Snake',
+        image: extremeSnakeImage,
+        description: `Extreme Snake is a re imagining of the classic video game I first 
+                      played on the Nokia 3410. This version features multi layers 
+                      levels, powerups and even local multiplayer so you can go head to 
+                      head against your friends!`,
+        skills: ['c#','Unity'],
+        github: '',
+        site: ''
+    }
 ]
