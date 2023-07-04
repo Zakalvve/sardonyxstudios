@@ -8,7 +8,7 @@ const Projects = ({themeColor}) => {
         <section id='projects' className='bg-space-600 relative z-10 w-full py-20'>
             <Container>
                 <div className="flex flex-col items-center text-center">
-                    <Caption themeColor={{ theme: themeColor, color: 'green'}}>
+                    <Caption themeColor={themeColor}>
                         Projects
                     </Caption>
                     <Heading>

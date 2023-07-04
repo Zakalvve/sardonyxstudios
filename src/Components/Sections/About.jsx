@@ -16,7 +16,7 @@ const About = ({themeColor}) => {
             <Container>
                 <div className='w-full py-28 lg:flex'>
                     <div className='lg:ml-auto lg:basis-1/2 lg:pl-10 xl:pl-20'>
-                        <Caption themeColor={{ theme: themeColor, color: 'red'}}>About</Caption>
+                        <Caption themeColor={themeColor}>About</Caption>
                         <Heading>
                             Who am I anyway?
                         </Heading>

@@ -13,10 +13,10 @@ const Heading = ({children, className, ...props}) => {
     )
 }
 
-const  Caption = ({children, className, themeColor, ...props}) => {
+const  Caption = ({children, className, themeColor = 'primary', ...props}) => {
     return (
         <p
-            className={reduceClasses(`mb-4 inline-block font-medium uppercase text-${themeColor.theme} text-xl md:text-2xl`, className)}
+            className={reduceClasses(`mb-4 inline-block font-medium uppercase text-${themeColor} text-xl md:text-2xl`, className)}
             {...props}
         >
             {/*style={{

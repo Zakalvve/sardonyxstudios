@@ -9,9 +9,9 @@ const Contact = ({themeColor}) => {
             <Container>
                 <div className='flex h-full w-full flex-col lg:flex-row'>
                     <div className='basis-full lg:self-center'>
-                        <Caption themeColor={{theme: themeColor, color: 'blue'}}>Contact Me</Caption>
+                        <Caption themeColor={themeColor}>Contact Me</Caption>
                         <Heading>Want to reach out?</Heading>
-                        <Paragraph>If you have any questions or are interesting in hiring you can contact me here. I love to discuss new posibilities.</Paragraph>
+                        <Paragraph>If you have any questions or are interesting in hiring you can contact me here. I love to discuss new possibilities.</Paragraph>
                     </div>
                     <div className='mt-10 basis-full lg:ml-10 lg:mt-0 xl:ml-20'>
                         <ContactForm themeColor={themeColor}/>
