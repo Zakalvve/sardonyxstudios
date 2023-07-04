@@ -25,7 +25,7 @@ module.exports = {
       colors: {
         primary: '#30363d',
         'neon-green': '#7ee787',
-        'neon-red': '#cb634f',
+        'neon-red': '#ff3837',
         'neon-purple': '#6a3bc4',
         'neon-blue': '#7479ee',
         space: {
