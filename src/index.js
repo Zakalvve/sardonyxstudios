@@ -4,11 +4,16 @@ import '@fontsource-variable/montserrat';
 import './Styles/index.css';
 import App from './Components/App';
 import reportWebVitals from './reportWebVitals';
+import router from './Pages/router';
+
+import { RouterProvider } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App>
+      <RouterProvider router={router}/>
+    </App>
   </React.StrictMode>
 );
 

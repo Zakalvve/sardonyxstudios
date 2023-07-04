@@ -18,8 +18,8 @@ const Projects = ({themeColor}) => {
                 </div>
             </Container>
             <div className='flex items-center justify-center gap-[3vmin] py-8 flex-col flex-nowrap md:flex-row md:flex-wrap p-12 transition-all'>
-                {projectsData.map(project => {
-                    return (<ProjectCard themeColor={themeColor} project={project}/>)
+                {projectsData.map((project) => {
+                    return (<ProjectCard key={project.id} themeColor={themeColor} project={project}/>)
                 })}
             </div>
         </section>

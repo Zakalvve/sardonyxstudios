@@ -7,14 +7,12 @@ import Contact from "../Components/Sections/Contact";
 
 const Home = () => {
     return (
-        <Layout>
-            <main id="main">
-                <Hero/>
-                <About themeColor='neon-green'/>
-                <Projects themeColor='neon-red'/>
-                <Contact themeColor='neon-blue'/>
-            </main>
-        </Layout>
+        <main id="main">
+            <Hero/>
+            <About themeColor='neon-green'/>
+            <Projects themeColor='neon-red'/>
+            <Contact themeColor='neon-blue'/>
+        </main>
     );
 }
 

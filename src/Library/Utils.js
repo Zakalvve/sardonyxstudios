@@ -51,6 +51,7 @@ export const contactFromValidation = z.object({
 
 export const projectsData = [
     {
+        id: 1,
         name: 'Mihaelas Journal',
         image: journalImage,
         description: `Have you ever played DnD? If not you should! It'\s a lot of fun. 
@@ -65,6 +66,7 @@ export const projectsData = [
         site: 'https://mihaelas-journal.netlify.app/'
     },
     {
+        id: 2,
         name: 'Lets Game',
         image: letsGameImage,
         description: `I created Lets Game as one of my first full stack projects whilst learning ASP.NET.
@@ -76,6 +78,7 @@ export const projectsData = [
         site: ''
     },
     {
+        id: 3,
         name: 'Extreme Snake',
         image: extremeSnakeImage,
         description: `Extreme Snake is a re imagining of the classic video game I first 
