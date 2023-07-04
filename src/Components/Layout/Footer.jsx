@@ -24,7 +24,7 @@ const Footer = () => {
             <Container>
                 <div className='grid grid-cols-1 items-center justify-center gap-6 py-12 lg:grid-cols-3'>
                     <div className='flex text-space-100 justify-center gap-x-6 lg:order-last lg:justify-end'>
-                        <a>Secondary Link</a>
+                        <a href="/">Secondary Link</a>
                     </div>
                     <ul aria-label='socials'  className="flex text-space-100 justify-center gap-x-2">
                         <li>

@@ -54,7 +54,7 @@ export const projectsData = [
         id: 1,
         name: 'Mihaelas Journal',
         image: journalImage,
-        description: `Have you ever played DnD? If not you should! It'\s a lot of fun. 
+        description: `Have you ever played DnD? If not you should! It's a lot of fun. 
                       I have been running a game for a very dedicated 
                       group of players. I was only to happy to take on this project 
                       on behalf of one of them. This website was made as an interactive and 

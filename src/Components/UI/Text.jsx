@@ -1,5 +1,4 @@
 import { reduceClasses } from '../../Library/Utils';
-import { cva } from 'class-variance-authority';
 import React from 'react';
 
 const Heading = ({children, className, ...props}) => {

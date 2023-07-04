@@ -1,5 +1,6 @@
 import { projectsData } from "../Library/Utils";
 import { useLoaderData } from "react-router-dom";
+import ProjectDetails from "../Components/Sections/ProjectDetails";
 
 export const projectLoader = ({params}) => {
     console.log(params);
@@ -8,10 +9,9 @@ export const projectLoader = ({params}) => {
 
 const Project = () => {
     const project = useLoaderData();
-    console.log(project);
     return (
         <main id='main'>
-
+            <ProjectDetails project={project}/>
         </main>
     );
 }
