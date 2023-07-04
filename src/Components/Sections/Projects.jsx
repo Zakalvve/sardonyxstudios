@@ -2,6 +2,7 @@ import React from "react";
 import Container from "../UI/Container";
 import { Caption, Heading } from "../UI/Text";
 import ProjectCard from "../ProjectCard";
+import { projectsData } from "../../Library/Utils";
 
 const Projects = ({themeColor}) => {
     return (
@@ -17,10 +18,9 @@ const Projects = ({themeColor}) => {
                 </div>
             </Container>
             <div className='flex items-center justify-center gap-[3vmin] py-8 flex-col flex-nowrap md:flex-row md:flex-wrap p-12 transition-all'>
-                <ProjectCard themeColor={themeColor}/>
-                <ProjectCard themeColor={themeColor}/>
-                <ProjectCard themeColor={themeColor}/>
-                <ProjectCard themeColor={themeColor}/>
+                {projectsData.map(project => {
+                    return (<ProjectCard themeColor={themeColor} project={project}/>)
+                })}
             </div>
         </section>
     );

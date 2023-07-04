@@ -2,6 +2,8 @@ import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import emailjs from '@emailjs/browser';
 import { z } from 'zod';
+import journalImage from '../Assets/mihaelas-journal.png';
+import letsGameImage from '../Assets/lets-game.png';
 
 export const reduceClasses = (...inputs) => {
     return twMerge(clsx(inputs));
@@ -45,3 +47,31 @@ export const contactFromValidation = z.object({
     email: z.string().email(),
     message: z.string().nonempty({ message: "Message cannot be empty" }).max(1000, {message: "Message cannot be more that 1000 characters"})
 });
+
+export const projectsData = [
+    {
+        name: 'Mihaelas Journal',
+        image: journalImage,
+        description: `Have you ever played DnD? If not you should! It'\s a lot of fun. 
+                      I have been running a game for a very dedicated 
+                      group of players. I was only to happy to take on this project 
+                      on behalf of one of them. This website was made as an interactive and 
+                      immersive way to read through the in character jorunal written 
+                      by Michael. It features optional playback of a dynamic soundscape
+                      created in real-time`,
+        skills: ['js','react', 'html', 'css', 'react-bootstrap', 'markdown'],
+        github: 'https://github.com/Zakalvve/mihaelas-journal',
+        site: 'https://mihaelas-journal.netlify.app/'
+    },
+    {
+        name: 'Lets Game',
+        image: letsGameImage,
+        description: `I created Lets Game as one of my first full stack projects whilst learning ASP.NET.
+                      The idea of the app is to provide board gamers with a way to organise and arrage 
+                      group meetups. Users can create polls so they can decide what to play ahead of time.
+                      That means less time debating what to play, more time playing!`,
+        skills: ['c#','ASP.NET Core', 'bootstrap', 'jquery', 'ajax', 'sqlserver', 'entity framework'],
+        github: 'https://github.com/Zakalvve/Lets-Game',
+        site: ''
+    },
+]
