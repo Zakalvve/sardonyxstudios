@@ -6,7 +6,7 @@ import itsMe from '../../Assets/me.jpg'
 
 const About = ({themeColor}) => {
     return (
-        <section id='about' className='bg-space-600 relative z-10 flex min-h-screen w-full flex-col items-center lg:flex-row'>
+        <section id='about' className='bg-space-600 relative z-10 flex min-h-screen w-full flex-col items-center lg:flex-row mb-[-2px]'>
             <Image 
                 className='inset-0 max-h-screen w-full object-cover object-center lg:absolute lg:h-full lg:w-1/2' 
                 src={itsMe}

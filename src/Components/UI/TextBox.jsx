@@ -11,7 +11,7 @@ const TextBox = React.forwardRef(({className, type, themeColor, ...props},ref) =
         <input 
             ref={ref}
             type={type}
-            className={reduceClasses(`peer block border border-space-400 bg-space-500 w-full appearance-none rounded-sm p-3 shadow-[0_0_6px,_inset_0_0_6px] shadow-transparent ${colorVariants[themeColor]} focus:outline-none disabled:cursor-not-allowed disabled:opacity-50`, className)}
+            className={reduceClasses(`peer block border border-space-400 bg-space-500 w-full appearance-none rounded-sm p-3 shadow-[0_0_6px,_inset_0_0_6px] shadow-transparent ${colorVariants[themeColor]} autofill:appearance-none focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 autofill:`, className)}
             {...props}
         />
     )

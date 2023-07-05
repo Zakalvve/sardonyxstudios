@@ -4,7 +4,7 @@ import React from 'react';
 const Heading = ({children, className, ...props}) => {
     return (
         <h2
-            className={reduceClasses('mb-4 text-3xl font-bold text-white md:text-5xl', className)}
+            className={reduceClasses('mb-4 text-2xl sm:text-4xl xl:text-5xl font-bold text-white', className)}
             {...props}
         >
             {children}
@@ -15,7 +15,7 @@ const Heading = ({children, className, ...props}) => {
 const  Caption = ({children, className, themeColor = 'primary', ...props}) => {
     return (
         <p
-            className={reduceClasses(`mb-4 inline-block font-medium uppercase text-${themeColor} text-xl md:text-2xl`, className)}
+            className={reduceClasses(`mb-4 inline-block font-medium uppercase text-${themeColor} text-lg sm:text-xl md:text-2xl`, className)}
             {...props}
         >
             {/*style={{
