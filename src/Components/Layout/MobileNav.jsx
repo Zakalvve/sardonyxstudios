@@ -15,7 +15,7 @@ const MobileNav = ({isOpen, toggleOpen, links}) => {
         },
         closed: {
             opacity: 0,
-            transition: { duration: 0.4 }
+            transition: { delay: 0.6, duration: 0.4 }
         }
     }
 
@@ -51,9 +51,8 @@ const MobileNav = ({isOpen, toggleOpen, links}) => {
                     initial={bgVariants.closed}
                     animate={bgVariants.open}
                     exit={bgVariants.closed}
-                    variants={bgVariants}
                     aria-controls="mobile-navigation-toggle"
-                    className='border-1 p-4 border-space-400 bg-space-600/90 backdrop-blur-sm supports-[backdrop-filter]:bg-space-600/80 min-w-[10rem] w-[35vw]'
+                    className='border-1 p-4 border-space-400 bg-transparent min-w-[10rem] w-[35vw]'
                 >
                 <Container>
                     <nav
@@ -93,7 +92,7 @@ const MobileNavOperlay = ({ isOpen, toggleOpen,}) => {
                     transition={{ duration: 0.3 }}
                     aria-hidden
                     onClick={toggleOpen}
-                    className="fixed inset-0 bg-space-600/40 -z-10 backdrop-blur-sm"
+                    className="fixed inset-0 bg-space-600/80 -z-10 backdrop-blur-sm"
                 />
             )}
         </AnimatePresence>
