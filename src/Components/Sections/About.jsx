@@ -7,7 +7,7 @@ import { images } from '../../Assets/assets'
 const About = ({themeColor}) => {
     const itsMe = images.MeOnGuitarImage;
     return (
-        <section id='about' className='bg-space-600 relative z-10 flex min-h-screen w-full flex-col items-center lg:flex-row mb-[-2px]'>
+        <section id='about' className='bg-space-600 relative z-10 flex min-h-screen w-full flex-col-reverse items-center lg:flex-row mb-[-2px]'>
             <Image 
                 className='inset-0 max-h-screen w-full object-cover object-center lg:absolute lg:h-full lg:w-1/2' 
                 src={itsMe}
