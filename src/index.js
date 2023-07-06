@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Router from './Pages/Router';
+import Router from './Pages/router';
 import { RouterProvider } from 'react-router-dom';
 import App from './Components/App';
 import reportWebVitals from './reportWebVitals';

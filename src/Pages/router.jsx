@@ -3,7 +3,7 @@ import HomePage from "./HomePage";
 import ProjectPage, { projectLoader } from "./ProjectPage";
 import ErrorPage from "./ErrorPage";
 
-const Router = createBrowserRouter([
+const router = createBrowserRouter([
     {
         path: "/",
         element: <HomePage/>,
@@ -16,4 +16,4 @@ const Router = createBrowserRouter([
     }
 ]);
 
-export default Router;
+export default router;
