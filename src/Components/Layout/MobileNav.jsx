@@ -6,41 +6,41 @@ import { useLockedBody } from "usehooks-ts";
 
 import { AnimatePresence, motion, useAnimate } from "framer-motion";
 
-const MobileNav = ({isOpen, toggleOpen, links, height}) => {
+const MobileNav = ({isOpen, toggleOpen, links}) => {
     useLockedBody(isOpen);
     const bgVariants = {
         open: {
             opacity: 1,
-            transition: { duration: 0.3 }
+            transition: { duration: 0.4 }
         },
         closed: {
             opacity: 0,
-            transition: { duration: 0.3 }
+            transition: { duration: 0.4 }
         }
     }
-    const navVariants = {
-        open: {
-          transition: { staggerChildren: 0.07, delayChildren: 0.2 }
-        },
-        closed: {
-          transition: { staggerChildren: 0.05, staggerDirection: -1 }
-        }
-    };
 
     const itemVariants = {
-        open: {
-          y: 0,
-          opacity: 1,
-          transition: {
-            y: { stiffness: 1000, velocity: -100 }
-          }
+        open: (i) => {
+            let delay = i * 0.2;
+            return {
+                y: 0,
+                opacity: 1,
+                transition: {
+                  delay,
+                  y: { stiffness: 1000, velocity: -100 }
+                }
+              }
         },
-        closed: {
-          y: 30,
-          opacity: 0,
-          transition: {
-            y: { stiffness: 1000 }
-          }
+        closed: (i, total) =>{
+            let delay = (total - i) * 0.1;
+            return {
+                y: 30,
+                opacity: 0,
+                transition: {
+                  delay,
+                  y: { stiffness: 1000 }
+                }
+            }
         }
     };
 
@@ -59,27 +59,21 @@ const MobileNav = ({isOpen, toggleOpen, links, height}) => {
                     <nav
                         className='flex flex-col justify-center'
                     >
-                        <motion.ul>
-                            {links.map((link, i) => (
-                                    <motion.li 
-                                        key={i}
-                                        initial={itemVariants.closed}
-                                        animate={itemVariants.open}
-                                        exit={itemVariants.closed}
-                                        whileHover={{ scale: 1.1 }}
-                                        whileTap={{ scale:0.95 }}
-                                        onClick={toggleOpen}
-                                        className='py-2'
-                                    >
-                                        <a
-                                            href={link.href}
-                                            className={reduceClasses('uppercase transition-[letter-spacing,color] text-white', 'focus-visible:underline hover:underline')}
-                                        >
-                                            {link.label}
-                                        </a>
-                                    </motion.li>
-                                ))}
-                        </motion.ul>
+                        {links.map((link, i) => (
+                            <motion.a
+                                key={i}
+                                initial={itemVariants.closed(i, links.length)}
+                                animate={itemVariants.open(i)}
+                                exit={itemVariants.closed(i, links.length)}
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale:0.95 }}
+                                onClick={toggleOpen}
+                                href={link.href}
+                                className={reduceClasses('py-2 uppercase transition-[letter-spacing,color] text-white', 'focus-visible:underline hover:underline')}
+                            >
+                                {link.label}
+                            </motion.a>
+                        ))}
                     </nav>
                 </Container>
             </motion.div>
