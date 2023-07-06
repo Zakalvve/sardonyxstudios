@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../UI/Container";
 import { Caption, Heading } from "../UI/Text";
 import ProjectCard from "../ProjectCard";
-import { projectsData } from "../../Library/Utils";
+import { projectsData } from "../../Data/data";
 
 const Projects = ({themeColor}) => {
     return (

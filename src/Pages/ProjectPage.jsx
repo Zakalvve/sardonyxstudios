@@ -1,4 +1,4 @@
-import { projectsData } from "../Library/Utils";
+import { projectsData } from "../Data/data";
 import { useLoaderData } from "react-router-dom";
 import ProjectDetails from "../Components/Sections/ProjectDetails";
 
@@ -7,7 +7,7 @@ export const projectLoader = ({params}) => {
     return projectsData.find(project => project.id === parseInt(params.id));
 }
 
-const Project = () => {
+const ProjectPage = () => {
     const project = useLoaderData();
     return (
         <main id='main'>
@@ -16,4 +16,4 @@ const Project = () => {
     );
 }
 
-export default Project;
+export default ProjectPage;

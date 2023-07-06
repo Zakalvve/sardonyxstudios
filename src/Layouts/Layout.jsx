@@ -7,15 +7,10 @@ const Layout = ({className, children}) => {
     return (
         <div className={reduceClasses('text-white', className)}>
             <NavBar/>
-            {children}
+                {children}
             <Footer/>
         </div>
     );
 }
 
 export default Layout;
-
-//nav
-//renderPage
-//contact
-//footer

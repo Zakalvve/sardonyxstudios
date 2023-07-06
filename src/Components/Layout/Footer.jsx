@@ -1,18 +1,12 @@
 import React, { useState } from "react";
 import Container from "../UI/Container";
 import { siteLinks } from "../../Library/Utils";
-import { icons } from "../../Assets/assets";
+import { socials } from "../../Data/data";
 
 const Footer = () => {
     const links = siteLinks();
     const [currentYear] = useState(() => new Date().getFullYear());
-    const socials = [
-        {
-            text: 'View GitHub profile',
-            href: 'https://github.com/Zakalvve',
-            icon: icons.GitHub
-        }
-    ];
+
     return (
         <footer aria-label="Primary" className="relative z-10 w-full border-t border-space-400 bg-space-500 py-3 lg:py-5">
             <Container>

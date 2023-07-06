@@ -1,18 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import '@fontsource-variable/montserrat';
-import './Styles/index.css';
+import Router from './Pages/Router';
+import { RouterProvider } from 'react-router-dom';
 import App from './Components/App';
 import reportWebVitals from './reportWebVitals';
-import router from './Pages/router';
+import '@fontsource-variable/montserrat';
+import './Styles/index.css';
 
-import { RouterProvider } from 'react-router-dom';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App>
-      <RouterProvider router={router}/>
+      <RouterProvider router={Router}/>
     </App>
   </React.StrictMode>
 );

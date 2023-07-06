@@ -4,7 +4,7 @@ import About from "../Components/Sections/About";
 import Projects from "../Components/Sections/Projects";
 import Contact from "../Components/Sections/Contact";
 
-const Home = () => {
+const HomePage = () => {
     return (
         <main id="main">
             <Hero/>
@@ -15,4 +15,4 @@ const Home = () => {
     );
 }
 
-export default Home;
+export default HomePage;

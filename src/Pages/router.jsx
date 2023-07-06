@@ -1,20 +1,19 @@
 import { createBrowserRouter } from "react-router-dom";
-import Home from "./Home";
-import Project from "./Project";
+import HomePage from "./HomePage";
+import ProjectPage, { projectLoader } from "./ProjectPage";
 import ErrorPage from "./ErrorPage";
-import { projectLoader } from "./Project";
 
-const router = createBrowserRouter([
+const Router = createBrowserRouter([
     {
         path: "/",
-        element: <Home/>,
+        element: <HomePage/>,
         errorElement: <ErrorPage/>
     },
     {
         path: 'projects/:id',
-        element: <Project/>,
+        element: <ProjectPage/>,
         loader: projectLoader
     }
 ]);
 
-export default router;
+export default Router;
