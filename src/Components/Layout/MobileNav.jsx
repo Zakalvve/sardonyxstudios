@@ -15,7 +15,7 @@ const MobileNav = ({isOpen, toggleOpen, links}) => {
         },
         closed: {
             opacity: 0,
-            transition: { delay: 0.6, duration: 0.4 }
+            transition: { duration: 0.4 }
         }
     }
 
@@ -27,6 +27,7 @@ const MobileNav = ({isOpen, toggleOpen, links}) => {
                 opacity: 1,
                 transition: {
                   delay,
+                  duration: 0.3,
                   y: { stiffness: 1000, velocity: -100 }
                 }
               }
@@ -34,10 +35,11 @@ const MobileNav = ({isOpen, toggleOpen, links}) => {
         closed: (i, total) =>{
             let delay = (total - i) * 0.1;
             return {
-                y: 30,
+                y: 50,
                 opacity: 0,
                 transition: {
                   delay,
+                  duration: 0.3,
                   y: { stiffness: 1000 }
                 }
             }
@@ -86,10 +88,10 @@ const MobileNavOperlay = ({ isOpen, toggleOpen,}) => {
         <AnimatePresence>
             {isOpen && (
                 <motion.div 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.3 }}
+                    initial={{ opacity: 0, transition: {delay: 0.4, duration: 0.4} }}
+                    animate={{ opacity: 1, transition: {duration: 0.4} }}
+                    exit={{ opacity: 0, transition: {delay: 0.4, duration: 0.4} }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
                     aria-hidden
                     onClick={toggleOpen}
                     className="fixed inset-0 bg-space-600/80 -z-10 backdrop-blur-sm"
