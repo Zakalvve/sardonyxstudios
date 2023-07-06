@@ -2,9 +2,10 @@ import Container from '../UI/Container';
 import { Caption, Heading, Paragraph } from '../UI/Text';
 import Image from '../UI/Image';
 import React from 'react';
-import itsMe from '../../Assets/me.jpg'
+import { images } from '../../Assets/assets'
 
 const About = ({themeColor}) => {
+    const itsMe = images.MeOnGuitarImage;
     return (
         <section id='about' className='bg-space-600 relative z-10 flex min-h-screen w-full flex-col items-center lg:flex-row mb-[-2px]'>
             <Image 

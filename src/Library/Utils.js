@@ -2,9 +2,8 @@ import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import emailjs from '@emailjs/browser';
 import { z } from 'zod';
-import journalImage from '../Assets/mihaelas-journal.png';
-import letsGameImage from '../Assets/lets-game.png';
-import extremeSnakeImage from '../Assets/extreme-snake.png'
+
+import { images } from '../Assets/assets';
 
 export const reduceClasses = (...inputs) => {
     return twMerge(clsx(inputs));
@@ -53,7 +52,7 @@ export const projectsData = [
     {
         id: 1,
         name: 'Mihaelas Journal',
-        image: journalImage,
+        image: images.MihaelasJournalImage,
         description: `Have you ever played DnD? If not you should! It's a lot of fun. 
                       I have been running a game for a very dedicated 
                       group of players. I was only to happy to take on this project 
@@ -68,7 +67,7 @@ export const projectsData = [
     {
         id: 2,
         name: 'Lets Game',
-        image: letsGameImage,
+        image: images.LetsGameImage,
         description: `I created Lets Game as one of my first full stack projects whilst learning ASP.NET.
                       The idea of the app is to provide board gamers with a way to organise and arrage 
                       group meetups. Users can create polls so they can decide what to play ahead of time.
@@ -80,7 +79,7 @@ export const projectsData = [
     {
         id: 3,
         name: 'Extreme Snake',
-        image: extremeSnakeImage,
+        image: images.SnakeGameImage,
         description: `Extreme Snake is a re imagining of the classic video game I first 
                       played on the Nokia 3410. This version features multi layers 
                       levels, powerups and even local multiplayer so you can go head to 
