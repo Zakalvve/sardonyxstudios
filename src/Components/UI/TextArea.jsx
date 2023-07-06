@@ -11,7 +11,7 @@ const TextArea = React.forwardRef(({className, themeColor, ...props}, ref) => {
     return (
         <textarea 
             ref={ref}
-            className={reduceClasses(`peer block max-h-36 min-h-[3.125rem] w-full appearance-none rounded-sm border border-space-400 bg-space-500 p-3 shadow-[0_0_6px,_inset_0_0_6px] shadow-transparent transition-colors ${colorVariants[themeColor]} focus:outline-none disabled:cursor-not-allowed disabled:opacity-50`, className)}
+            className={reduceClasses(`peer block h-52 max-h-96 min-h-[3.125rem] w-full appearance-none rounded-sm border border-space-400 bg-space-500 p-3 shadow-[0_0_6px,_inset_0_0_6px] shadow-transparent transition-colors ${colorVariants[themeColor]} focus:outline-none disabled:cursor-not-allowed disabled:opacity-50`, className)}
             {...props}
         />
     );
