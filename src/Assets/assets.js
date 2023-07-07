@@ -3,7 +3,7 @@ import SnakeGameImage from './extreme-snake.png';
 import LetsGameImage from './lets-game.png';
 import MeOnGuitarImage from './me.jpg';
 import MihaelasJournalImage from './mihaelas-journal.png'
-import Hero from './desktop-wallpaper-vaporwave-space-clone-hero-example.jpg'
+import Hero from './hero-desktop.jpg'
 
 
 const assets = {
