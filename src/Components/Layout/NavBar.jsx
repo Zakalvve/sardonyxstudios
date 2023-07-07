@@ -5,6 +5,9 @@ import { reduceClasses, siteLinks } from "../../Library/Utils";
 import Container from "../UI/Container";
 import ButtonLink from "../UI/ButtonLink";
 import MobileNav from "./MobileNav";
+import { HashLink as Link } from "react-router-hash-link";
+import { icons } from "../../Assets/assets";
+import { studio } from "../../Data/data";
 
 const NavBar = ({isBackgroundTranhsparent = true}) => {
     const windowHeight = useWindowHeight();
@@ -33,30 +36,33 @@ const NavBar = ({isBackgroundTranhsparent = true}) => {
                             <MobileNav.Toggle isOpen={isOpen} toggleOpen={toggle}/>
                         </div>
                         <nav aria-label="Primary" className="hidden items-center gap-x-6 md:flex">
-                            <ul className="hidden items-center gap-x-6 md:flex">
-                                {links.map((link, index) =>
-                                    <li className='relative py-1'><a
-                                        key={index}
-                                        href={link.href}
-                                        className="underline underline-offset-4 decoration-transparent text-sm uppercase text-white transition-all duration-300 hover:decoration-white"
-                                    >
-                                        {link.label}
-                                    </a></li>
-                                )}
-                            </ul>
+                            {links.map((link, index) =>
+                                <Link
+                                    key={index}
+                                    to={link.href}
+                                    className="relative py-1 underline underline-offset-4 decoration-transparent text-sm uppercase text-white transition-all duration-300 hover:decoration-white"
+                                >
+                                    {link.label}
+                                </Link>
+                            )}
                         </nav>
-                        <div className="flex items-center justify-center">
-                            Logo
+                        <div className="flex items-center justify-center text-white text-xl">
+                            <Link to='/'>
+                                <span className="uppercase font-bold">{studio}</span> Studios
+                            </Link>
                         </div>
                         <div className="flex items-center justify-end">
-                            <ButtonLink  href='/#contact' theme='primary' size='small' onClick={() => setIsOpen(false)} className='bg-transparent hover:bg-transparent hover:border-transparent'>
+                            <ButtonLink  to='/#contact' theme='primary' size='small' onClick={() => setIsOpen(false)} className='hidden md:block bg-transparent hover:bg-transparent hover:border-transparent'>
                                 Contact
                             </ButtonLink>
+                            <Link to='/#contact' onClick={() => setIsOpen(false)} className='md:hidden'>
+                                <icons.Mail className='h-6 w-6'/>
+                            </Link>
                         </div>
                     </div>
                 </Container>
             </div>
-            <MobileNav isOpen={isOpen} toggleOpen={toggle} links={links} height={windowHeight}/>
+            <MobileNav isOpen={isOpen} toggleOpen={toggle} links={links}/>
             <MobileNav.Overlay isOpen={isOpen} toggleOpen={toggle}/>
         </header>
     );

@@ -21,7 +21,7 @@ const Hero = () => {
                         font-bold leading-tight  md:leading-tight lg:leading-tight'>
                         New Frontiers<br />in Programming<br />and Design
                     </h1>
-                    <ButtonLink href='/#projects' theme='blue' size='large' grow={true} className='mt-12 bg-space-500/90 backdrop-blur-md supports-[backdrop-filter]:bg-space-500/70 backdrop-blur-md supports-[backdrop-filter]:bg-space-500/70'>
+                    <ButtonLink to='/#projects' theme='blue' size='large' grow={true} className='mt-12 bg-space-500/90 backdrop-blur-md supports-[backdrop-filter]:bg-space-500/70 backdrop-blur-md supports-[backdrop-filter]:bg-space-500/70'>
                         See what I've done
                     </ButtonLink>
                 </div>

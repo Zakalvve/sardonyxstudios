@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Container from "../UI/Container";
 import { siteLinks } from "../../Library/Utils";
-import { socials } from "../../Data/data";
+import { socials, studio } from "../../Data/data";
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Footer = () => {
     const links = siteLinks();
@@ -12,13 +13,13 @@ const Footer = () => {
             <Container>
                 <nav aria-label="Primary" className='flex justify-center gap-x-6 py-12'>
                     {links.map((link,index) => (
-                        <a
-                        key={index}
-                        href={link.href}
-                        className="text-md font-medium uppercase text-space-100 transition-colors hover:text-white focus-visible:text-space-100"
-                      >
-                        {link.label}
-                      </a>
+                        <Link
+                            key={index}
+                            to={link.href}
+                            className="text-md font-medium uppercase text-space-100 transition-colors hover:text-white focus-visible:text-space-100"
+                        >
+                            {link.label}
+                        </Link>
                     ))}
                 </nav>
             </Container>
@@ -44,7 +45,7 @@ const Footer = () => {
                     </ul>
                     <div className="flex justify-center lg:order-first lg:justify-start">
                         <small className="text-sm font-medium text-space-100">
-                        &copy; {currentYear} SARDONXY STUDIOS
+                        &copy; {currentYear} {studio.toUpperCase()} STUDIOS
                         </small>
                     </div>
                 </div>

@@ -3,11 +3,15 @@ import React, { useEffect } from "react";
 import Container from "../UI/Container";
 import { reduceClasses } from "../../Library/Utils";
 import { useLockedBody } from "usehooks-ts";
+import { HashLink as Link } from "react-router-hash-link";
 
 import { AnimatePresence, motion, useAnimate } from "framer-motion";
 
 const MobileNav = ({isOpen, toggleOpen, links}) => {
     useLockedBody(isOpen);
+
+    const MotionLink = motion(Link);
+
     const bgVariants = {
         open: {
             opacity: 1,
@@ -61,7 +65,7 @@ const MobileNav = ({isOpen, toggleOpen, links}) => {
                         className='flex flex-col justify-center'
                     >
                         {links.map((link, i) => (
-                            <motion.a
+                            <MotionLink
                                 key={i}
                                 initial={itemVariants.closed(i, links.length)}
                                 animate={itemVariants.open(i)}
@@ -69,11 +73,11 @@ const MobileNav = ({isOpen, toggleOpen, links}) => {
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale:0.95 }}
                                 onClick={toggleOpen}
-                                href={link.href}
-                                className={reduceClasses('py-2 uppercase transition-[letter-spacing,color] text-white', 'focus-visible:underline hover:underline')}
+                                to={link.href}
+                                className={reduceClasses('py-2 uppercase transition-[letter-spacing,color] text-white', 'focus-visible:underline')}
                             >
                                 {link.label}
-                            </motion.a>
+                            </MotionLink>
                         ))}
                     </nav>
                 </Container>

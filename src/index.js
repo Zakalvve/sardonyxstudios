@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Router from './Pages/router';
 import { RouterProvider } from 'react-router-dom';
-import App from './Components/App';
 import reportWebVitals from './reportWebVitals';
 import '@fontsource-variable/montserrat';
 import './Styles/index.css';
@@ -12,9 +11,7 @@ import './Styles/index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App>
       <RouterProvider router={Router}/>
-    </App>
   </React.StrictMode>
 );
 
