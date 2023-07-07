@@ -7,6 +7,7 @@ import { Caption, Heading, Paragraph } from "./UI/Text";
 import { useForm } from 'react-hook-form';
 import { sendEmail, contactFromValidation } from "../Library/Utils";
 import { zodResolver } from '@hookform/resolvers/zod';
+import { icons } from "../Assets/assets";
 
 const ContactForm = ({themeColor}) => {
 
@@ -19,8 +20,15 @@ const ContactForm = ({themeColor}) => {
 
     return isSubmitSuccessful ? (
             <div>
-                <Caption themeColor={themeColor}>Read you loud and clear!</Caption>
+                <Caption themeColor={themeColor}>We read you loud and clear!</Caption>
                 <Heading>I will contact you soon</Heading>
+            </div>
+        ) : isSubmitting ? (
+            <div className='flex flex-col items-center'>
+                <Caption themeColor={themeColor} className='mt-6'>This is major Tom to ground control...</Caption>
+                <div className='mt-2'>
+                    <icons.Spinner className="h-16 w-16 animate-spin" />
+                </div>
             </div>
         ) : (
         <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-y-6'>
@@ -54,7 +62,7 @@ const ContactForm = ({themeColor}) => {
                 />
                 {errors.message && (<Paragraph>{errors.message.message}</Paragraph>)}
             </div>
-            <Button theme='blue' size='medium'>Send</Button>
+            <Button theme='blue' size='medium' type='submit' disabled={isSubmitting}>Transmit</Button>
         </form>
     );
 }
