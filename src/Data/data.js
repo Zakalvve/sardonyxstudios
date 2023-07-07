@@ -4,6 +4,7 @@ import {icons, images} from '../Assets/assets'
 const data = {
     siteData: {
         root: 'www.sardonyx-studios.com',
+        studioName: 'Sardonyx',
         internalLinks: [
             {
                 label: 'About',
@@ -74,5 +75,6 @@ const projectsData = data.projectsData;
 const siteData = data.siteData;
 const internalLinks = data.siteData.internalLinks;
 const root = data.siteData.root;
+const studio = data.siteData.studioName;
 
-export { data as default, socials, projectsData, siteData, internalLinks, root }
+export { data as default, socials, projectsData, siteData, internalLinks, root, studio }
