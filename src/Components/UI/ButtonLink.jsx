@@ -2,14 +2,18 @@ import React, { useEffect, useState } from 'react';
 import useElementSize from '../../Hooks/UseElementSize';
 import { buttonVariants } from './Button';
 import { reduceClasses } from '../../Library/Utils';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const ButtonLink = React.forwardRef(({theme, size, grow, className, children, ...props}, ref) => {
     const [isHover, setIsHover] = useState(false);
     const [rectStyle, setRectStyle] = useState(null);
     const [target, rectSize] = useElementSize();
+    const hasMouse = matchMedia('(pointer:fine)').matches;
 
     const toggleHover = () => {
-        setIsHover(!isHover);
+        if (hasMouse){
+            setIsHover(!isHover);
+        }
     }
     
     useEffect(() => {
@@ -18,7 +22,7 @@ const ButtonLink = React.forwardRef(({theme, size, grow, className, children, ..
     
 
     return (
-        <a
+        <Link
             ref={ref}
             onMouseEnter={toggleHover}
             onMouseLeave={toggleHover}
@@ -26,6 +30,7 @@ const ButtonLink = React.forwardRef(({theme, size, grow, className, children, ..
                 theme,
                 size,
                 grow,
+                hasMouse,
                 className
             }))}
             {...props}
@@ -34,7 +39,7 @@ const ButtonLink = React.forwardRef(({theme, size, grow, className, children, ..
                 <rect ref={target} style={rectStyle} className={reduceClasses(buttonVariants.border({theme}))} x='0' y='0' fill='none' width='100%' height='100%'/>
             </svg>
             {children}
-        </a>
+        </Link>
     )
 });
 

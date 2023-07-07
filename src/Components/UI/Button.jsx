@@ -12,11 +12,11 @@ const buttonVariants = {
         {
             variants: {
                 theme: {
-                    primary: 'text-white bg-space-500 hover:bg-space-500 hover:border-2 hover:border-solid hover:border-space-border',
-                    green: 'text-neon-green bg-space-500 hover:bg-space-500 hover:border-2 hover:border-solid hover:border-space-border',
-                    red: 'text-neon-red bg-space-500 hover:bg-space-500 hover:border-2 hover:border-solid hover:border-space-border',
-                    purple: 'text-neon-purple bg-space-500 hover:bg-space-500 hover:border-2 hover:border-solid hover:border-space-border',
-                    blue: 'text-neon-blue bg-space-500 hover:bg-space-500 hover:border-2 hover:border-solid hover:border-space-border'
+                    primary: 'text-white bg-space-500',
+                    green: 'text-neon-green bg-space-500',
+                    red: 'text-neon-red bg-space-500',
+                    purple: 'text-neon-purple bg-space-500',
+                    blue: 'text-neon-blue bg-space-500'
                 },
                 size: {
                     small: 'px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base',
@@ -25,10 +25,11 @@ const buttonVariants = {
                 }
             },
             compoundVariants: [
-                {
-                    grow: true,
-                    className: 'hover:font-black hover:tracking-wide'
-                }
+            {
+                grow: true,
+                hasMouse: true,
+                className: 'hover:font-black hover:tracking-wide'
+            }
             ],
             defaultVariants: {
                 theme: 'primary',
@@ -60,7 +61,8 @@ const buttonVariants = {
         return isHover ? {
             //perimeter - length of underline offset = 
             strokeDasharray: dashArray,
-            strokeDashoffset: Math.round(offset)
+            strokeDashoffset: Math.round(offset),
+            strokeWidth: 4
         } : {
             strokeDasharray: '1000, 0'
         }
@@ -71,9 +73,12 @@ const Button = React.forwardRef(({theme, size, grow, className, children, ...pro
     const [isHover, setIsHover] = useState(false);
     const [rectStyle, setRectStyle] = useState(null);
     const [target, rectSize] = useElementSize();
+    const hasMouse = matchMedia('(pointer:fine)').matches;
 
     const toggleHover = () => {
-        setIsHover(!isHover);
+        if (hasMouse){
+            setIsHover(!isHover);
+        }
     }
     
     useEffect(() => {
@@ -90,6 +95,7 @@ const Button = React.forwardRef(({theme, size, grow, className, children, ...pro
                 theme,
                 size,
                 grow,
+                hasMouse,
                 className
             }))}
             {...props}
