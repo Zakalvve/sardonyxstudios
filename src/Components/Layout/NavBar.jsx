@@ -7,7 +7,8 @@ import ButtonLink from "../UI/ButtonLink";
 import MobileNav from "./MobileNav";
 import { HashLink as Link } from "react-router-hash-link";
 import { icons } from "../../Assets/assets";
-import { studio } from "../../Data/data";
+import { logo } from "../../Data/data";
+import { scrollToTop } from "../../Hooks/ScrollToTop";
 
 const NavBar = ({isBackgroundTranhsparent = true}) => {
     const windowHeight = useWindowHeight();
@@ -31,7 +32,7 @@ const NavBar = ({isBackgroundTranhsparent = true}) => {
                                     : 'border-transparent bg-transparent'
             )}>
                 <Container>
-                    <div className="grid grid-cols-3">
+                    <div className="flex space-between">
                         <div className="flex items-center md:hidden">
                             <MobileNav.Toggle isOpen={isOpen} toggleOpen={toggle}/>
                         </div>
@@ -46,9 +47,9 @@ const NavBar = ({isBackgroundTranhsparent = true}) => {
                                 </Link>
                             )}
                         </nav>
-                        <div className="flex items-center justify-center text-white text-xl">
-                            <Link to='/'>
-                                <span className="uppercase font-bold">{studio}</span> Studios
+                        <div className="flex items-center justify-center grow">
+                            <Link to='/' onClick={scrollToTop}>
+                                {logo}
                             </Link>
                         </div>
                         <div className="flex items-center justify-end">
