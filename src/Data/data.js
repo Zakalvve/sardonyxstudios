@@ -5,6 +5,11 @@ const data = {
     siteData: {
         root: 'www.sardonyx-studios.com',
         studioName: 'Sardonyx',
+        logo: (
+            <div className=' text-white text-lg sm:text-xl xl:text-2xl'>
+                <span className="uppercase font-bold">Sardonyx</span> Studios
+            </div>
+        ),
         internalLinks: [
             {
                 label: 'About',
@@ -76,5 +81,6 @@ const siteData = data.siteData;
 const internalLinks = data.siteData.internalLinks;
 const root = data.siteData.root;
 const studio = data.siteData.studioName;
+const logo = data.siteData.logo;
 
-export { data as default, socials, projectsData, siteData, internalLinks, root, studio }
+export { data as default, socials, projectsData, siteData, internalLinks, root, studio, logo }
