@@ -12,7 +12,7 @@ const Loading = () => {
         scrollToTop();
         setIsLoading(false);
         unlock();
-    },[]);
+    },[unlock]);
 
     return (
         <AnimatePresence>
