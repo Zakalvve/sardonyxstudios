@@ -7,13 +7,19 @@ import App from "../Components/App";
 const router = createHashRouter([
     {
         path: "/",
-        element: (<App><HomePage/></App>),
-        errorElement: (<App><ErrorPage/></App>)
-    },
-    {
-        path: 'projects/:id',
-        element: (<App><ProjectPage/></App>),
-        loader: projectLoader
+        element: (<App/>),
+        errorElement: (<ErrorPage/>),
+        children: [
+            {
+                index:true,
+                element: (<HomePage/>),
+            },
+            {
+                path: 'projects/:id',
+                element: (<ProjectPage/>),
+                loader: projectLoader
+            }
+        ]
     }
 ]);
 
