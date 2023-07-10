@@ -16,7 +16,7 @@ function formatDate(input) {
 
 const ProjectCard = ({themeColor, project}) => {
     return (
-        <Link to={`projects/${project.id}`} className='relative rounded-lg flex-1 border-space-400 border bg-space-500 shadow-card duration-300 md:hover:scale-[1.03] overflow-hidden w-[10rem]'
+        <Link to={`projects/${project.id}`} className='relative rounded-lg flex-1 border-space-400 border bg-space-500 shadow-card duration-300 md:hover:scale-[1.03] overflow-hidden md:basis-[45vmin] min-w-[35vw]'
         >
                     <Image src={project.image} className='w-full aspect-video object-cover object-centerborder-b border-space-400'/>
                     <div className='grow py-2 md:py-4 px-4 md:px-8 flex flex-col gap-y-2'>
