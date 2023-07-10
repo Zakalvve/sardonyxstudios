@@ -1,8 +1,8 @@
 import React from "react";
 import Container from "../UI/Container";
 import { Caption, Heading } from "../UI/Text";
-import ProjectCard from "../ProjectCard";
 import { projectsData } from "../../Data/data";
+import ProjectCards from "../ProjectCards";
 
 const Projects = ({themeColor}) => {
     return (
@@ -17,11 +17,7 @@ const Projects = ({themeColor}) => {
                     </Heading>
                 </div>
             
-                <div className='flex flex-nowrap flex-col md:flex-row md:flex-wrap items-center justify-center gap-[max(4vmin,1rem)] py-8 transition-all'>
-                    {projectsData.map((project) => {
-                        return (<ProjectCard key={project.id} themeColor={themeColor} project={project}/>)
-                    })}
-                </div>
+                <ProjectCards themeColor={themeColor} projects={projectsData} />
             </Container>
         </section>
     );
