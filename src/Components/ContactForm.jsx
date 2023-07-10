@@ -12,9 +12,7 @@ import { icons } from "../Assets/assets";
 const ContactForm = ({themeColor}) => {
 
     const {register, handleSubmit, formState: { errors, isSubmitSuccessful, isSubmitting } } = useForm({resolver: zodResolver(contactFromValidation), mode:'onTouched'});
-    console.log(errors, isSubmitSuccessful, isSubmitting);
     const onSubmit = async (data) => {
-        console.log(data);
         await sendEmail(data);
     };
 
