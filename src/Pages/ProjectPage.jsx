@@ -4,7 +4,6 @@ import ProjectDetails from "../Components/Sections/ProjectDetails";
 import { ScrollToTopOnMount } from "../Hooks/ScrollToTop";
 
 export const projectLoader = ({params}) => {
-    console.log(params);
     return projectsData.find(project => project.id === parseInt(params.id));
 }
 

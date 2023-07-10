@@ -9,9 +9,10 @@ const Loading = () => {
     const unlock = useBodyLock(isLoading);
 
     useEffect(() => {
-        scrollToTop();
         setIsLoading(false);
         unlock();
+        console.log("Test");
+        setTimeout(scrollToTop,100);
     },[unlock]);
 
     return (
