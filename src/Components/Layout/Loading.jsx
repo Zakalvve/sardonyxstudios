@@ -11,7 +11,6 @@ const Loading = () => {
     useEffect(() => {
         setIsLoading(false);
         unlock();
-        console.log("Test");
         setTimeout(scrollToTop,100);
     },[unlock]);
 
