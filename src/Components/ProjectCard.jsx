@@ -3,16 +3,33 @@ import Image from "./UI/Image";
 import { Caption, Paragraph } from "./UI/Text";
 import { Link } from "react-router-dom";
 
+function formatDate(input) {
+    const date = new Date(input);
+  
+    const formattedDate = date.toLocaleDateString('en-GB', {
+      month: 'long',
+      year: 'numeric',
+    });
+  
+    return formattedDate;
+}
+
 const ProjectCard = ({themeColor, project}) => {
     return (
-        <Link to={`projects/${project.id}`} className='relative rounded-lg flex-1 border-space-400 border bg-gradient-radial from-space-600 to-space-500 shadow-card duration-300 md:hover:scale-[1.05]'
+        <Link to={`projects/${project.id}`} className='relative rounded-lg flex-1 border-space-400 border bg-space-500 shadow-card duration-300 md:hover:scale-[1.03] overflow-hidden w-[10rem]'
         >
-                    <Image src={project.image} className='h-1/2 w-full object-cover border-b border-space-400'/>
-                    <div className='my-auto grow p-4 md:p-8 max-h-1/2'>
-                        <Caption themeColor={themeColor} className='text-lg md:text-xl'>
+                    <Image src={project.image} className='w-full aspect-video object-cover object-centerborder-b border-space-400'/>
+                    <div className='grow py-2 md:py-4 px-4 md:px-8 flex flex-col gap-y-2'>
+                        <p className="text-sm text-space-100">{formatDate(project.date)}</p>
+                        <Caption themeColor={themeColor} className='text-lg md:text-xl mb-0'>
                             {project.name}
                         </Caption>
-                        <Paragraph>
+                        {project.skills && (
+                            <Paragraph className='text-sm mb-2'>
+                                {project.skills.join(', ')}
+                            </Paragraph>
+                        )}
+                        <Paragraph >
                             {project.description}
                         </Paragraph>
                     </div>
@@ -21,12 +38,3 @@ const ProjectCard = ({themeColor, project}) => {
 }
 
 export default ProjectCard;
-
-/*
-bg-space-500 border border-space-400 rounded-xl shadow-card relative flex flex-col
-
-            h-[max(70vh,27rem)]
-            sm:w-[max(30vw,23rem)]
-            max-h-[40rem]
-
-            transition-all duration-300 hover:scale-105 overflow-hidden*/

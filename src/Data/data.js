@@ -35,6 +35,7 @@ const data = {
     projectsData: [
         {
             id: 1,
+            date: '2023-02-03',
             name: 'Mihaelas Journal',
             image: images.MihaelasJournalImage,
             description: `Have you ever played DnD? If not you should! It's a lot of fun. 
@@ -51,6 +52,7 @@ const data = {
         {
             id: 2,
             name: 'Lets Game',
+            date: '2022-12-29',
             image: images.LetsGameImage,
             description: `I created Lets Game as one of my first full stack projects whilst learning ASP.NET.
                           The idea of the app is to provide board gamers with a way to organise and arrage 
@@ -63,6 +65,7 @@ const data = {
         {
             id: 3,
             name: 'Extreme Snake',
+            date: '2023-04-02',
             image: images.SnakeGameImage,
             description: `Extreme Snake is a re imagining of the classic video game I first 
                           played on the Nokia 3410. This version features multi layers 
