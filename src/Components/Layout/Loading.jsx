@@ -1,6 +1,6 @@
 import useBodyLock from "../../Hooks/UseBodyLock";
 import { AnimatePresence, motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { logo } from "../../Data/data";
 import { scrollToTop } from "../UI/Scrolling";
 
@@ -9,9 +9,9 @@ const Loading = () => {
     const unlock = useBodyLock(isLoading);
 
     useEffect(() => {
+        if (isLoading) scrollToTop();
         setIsLoading(false);
         unlock();
-        setTimeout(scrollToTop,100);
     },[unlock]);
 
     return (
