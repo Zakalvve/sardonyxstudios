@@ -1,6 +1,6 @@
 import useBodyLock from "../../Hooks/UseBodyLock";
 import { AnimatePresence, motion } from 'framer-motion';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { logo } from "../../Data/data";
 import { scrollToTop } from "../UI/Scrolling";
 
@@ -12,7 +12,7 @@ const Loading = () => {
         if (isLoading) scrollToTop();
         setIsLoading(false);
         unlock();
-    },[unlock]);
+    },[unlock, isLoading]);
 
     return (
         <AnimatePresence>
