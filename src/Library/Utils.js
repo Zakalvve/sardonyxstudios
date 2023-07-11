@@ -33,3 +33,14 @@ export const contactFromValidation = z.object({
     email: z.string().email(),
     message: z.string().nonempty({ message: "Message cannot be empty" }).max(1000, {message: "Message cannot be more that 1000 characters"})
 });
+
+export const formatDate = (input) => {
+    const date = new Date(input);
+  
+    const formattedDate = date.toLocaleDateString('en-GB', {
+      month: 'long',
+      year: 'numeric',
+    });
+  
+    return formattedDate;
+}
