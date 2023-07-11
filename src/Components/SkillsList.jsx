@@ -2,7 +2,6 @@ import { icons } from "../Assets/assets"
 import { shuffleArray } from '../Library/Utils'
 
 const SkillsList = ({skills}) => {
-    console.log(skills);
     const skillsIcons = icons.SkillsIcons.filter(skill => skills.find(skillString => skillString.toLowerCase() === skill.name)).map(skill => skill.icon);
 
     return (

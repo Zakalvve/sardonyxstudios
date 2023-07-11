@@ -22,7 +22,7 @@ export const sendEmail = async (data) => {
     data.source = root;
     return emailjs.send('service_3fwt3bq', 'template_g6j4jcs', data, 'P590nBXSqdIgcY0qZ')
     .then((result) => {
-        console.log(result);
+        console.log("E-Mail sent successfully");
     }, (error) => {
         console.log(error);
     });
@@ -51,7 +51,6 @@ export const shuffleArray = (array, passes = 1) => {
     for (let p = 0; p < passes; p++){
         for (let i = 0; i < shuffledArray.length; i++){
             let j = Math.floor(Math.random() * (shuffledArray.length));
-            console.log(`Shuffling index ${i} with index ${j}`);
             [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
         }
     }
