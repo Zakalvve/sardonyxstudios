@@ -44,3 +44,16 @@ export const formatDate = (input) => {
   
     return formattedDate;
 }
+
+export const shuffleArray = (array, passes = 1) => {
+    if (!passes || passes < 0) return array;
+    const shuffledArray = [...array];
+    for (let p = 0; p < passes; p++){
+        for (let i = 0; i < shuffledArray.length; i++){
+            let j = Math.floor(Math.random() * (shuffledArray.length));
+            console.log(`Shuffling index ${i} with index ${j}`);
+            [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+        }
+    }
+    return shuffledArray;
+}

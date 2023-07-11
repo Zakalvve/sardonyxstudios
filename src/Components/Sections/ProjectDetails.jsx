@@ -4,9 +4,10 @@ import { icons } from '../../Assets/assets';
 import { Heading, Date, Paragraph, Caption} from '../UI/Text';
 import ProjectCards from '../ProjectCards'
 import { projectsData } from '../../Data/data';
+import { shuffleArray } from '../../Library/Utils';
 
 const ProjectDetails = ({project}) => {
-    
+
     return (
         <>
             <section id='project' className='relative py-[10vh] flex min-h-screen w-full bg-space-600 after:absolute after:inset-0 after:h-full after:bg-gradient-to-t after:from-space-600 after:via-black/80 after:to-black/70'>
@@ -40,7 +41,7 @@ const ProjectDetails = ({project}) => {
                 <Container>
                     <div className='flex flex-col items-center text-center'>
                         <Caption themeColor='neon-green' className='mb-8'>Other Projects</Caption>
-                        <ProjectCards projects={projectsData.slice(0,2)}/>
+                        <ProjectCards projects={shuffleArray(projectsData).slice(0,2)}/>
                     </div>
                 </Container>
             </section>
