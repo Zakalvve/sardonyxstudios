@@ -1,6 +1,6 @@
 import { projectsData } from "../Data/data";
 import { useLoaderData } from "react-router-dom";
-import ProjectDetails from "../Components/Sections/ProjectDetails";
+import Project from "../Components/Sections/Project";
 import { ScrollToTopOnMount } from "../Components/UI/Scrolling";
 
 export const projectLoader = ({params}) => {
@@ -12,7 +12,7 @@ const ProjectPage = () => {
     return (
         <main id='main'>
             <ScrollToTopOnMount />
-            <ProjectDetails project={project}/>
+            <Project project={project}/>
         </main>
     );
 }

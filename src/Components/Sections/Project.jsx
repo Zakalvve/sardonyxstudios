@@ -8,12 +8,14 @@ import { shuffleArray } from '../../Library/Utils';
 import Pill from '../UI/Pill';
 import { useNavigate } from 'react-router-dom';
 
-const ProjectDetails = ({project}) => {
+const Project = ({project}) => {
     const navigate = useNavigate();
 
     const handleBack = () => {
         navigate(-1);
     };
+
+    const otherProjects = shuffleArray(projectsData.filter(projectData => projectData.name !== project.name)).slice(0,2);
 
     return (
         <>
@@ -53,7 +55,7 @@ const ProjectDetails = ({project}) => {
                 <Container>
                     <div className='flex flex-col items-center text-center'>
                         <Caption themeColor='neon-red' className='mb-8'>Other Projects</Caption>
-                        <ProjectCards projects={shuffleArray(projectsData).slice(0,2)}/>
+                        <ProjectCards projects={otherProjects}/>
                     </div>
                 </Container>
             </section>
@@ -61,4 +63,4 @@ const ProjectDetails = ({project}) => {
     )
 }
 
-export default ProjectDetails;
+export default Project;
