@@ -1,5 +1,6 @@
 import { reduceClasses } from '../../Library/Utils';
 import React from 'react';
+import { formatDate } from '../../Library/Utils';
 
 const Heading = ({children, className, ...props}) => {
     return (
@@ -29,12 +30,17 @@ const  Caption = ({children, className, themeColor = 'primary', ...props}) => {
 const Paragraph = ({children, className, ...props}) => {
     return (
         <p
-            className={reduceClasses('max-w-prose leading-relaxed text-space-100', className)}
+            className={reduceClasses('leading-relaxed text-space-100', className)}
             {...props}
         >
             {children}
         </p>
     )
 }
+const Date = ({date, className, ...props}) => {
+    return (
+        <p className="text-sm text-space-100">{formatDate(date)}</p>
+    )
+}
 
-export { Heading, Caption, Paragraph }
+export { Heading, Caption, Paragraph, Date }
