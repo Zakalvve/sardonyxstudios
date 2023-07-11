@@ -3,7 +3,7 @@ import Container from "../UI/Container";
 import { siteLinks } from "../../Library/Utils";
 import { socials, studio } from "../../Data/data";
 import { HashLink as Link } from 'react-router-hash-link';
-import { scrollToTop } from "../../Hooks/ScrollToTop";
+import { scrollToTop } from "../UI/Scrolling";
 
 const Footer = () => {
     const links = siteLinks();

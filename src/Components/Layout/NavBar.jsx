@@ -8,7 +8,7 @@ import MobileNav from "./MobileNav";
 import { HashLink as Link } from "react-router-hash-link";
 import { icons } from "../../Assets/assets";
 import { logo } from "../../Data/data";
-import { scrollToTop } from "../../Hooks/ScrollToTop";
+import { scrollToTop } from "../UI/Scrolling";
 
 const NavBar = ({isBackgroundTranhsparent = true}) => {
     const windowHeight = useWindowHeight();

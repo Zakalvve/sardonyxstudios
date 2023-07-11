@@ -1,7 +1,7 @@
 import { projectsData } from "../Data/data";
 import { useLoaderData } from "react-router-dom";
 import ProjectDetails from "../Components/Sections/ProjectDetails";
-import { ScrollToTopOnMount } from "../Hooks/ScrollToTop";
+import { ScrollToTopOnMount } from "../Components/UI/Scrolling";
 
 export const projectLoader = ({params}) => {
     return projectsData.find(project => project.id === parseInt(params.id));
