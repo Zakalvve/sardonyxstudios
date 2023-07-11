@@ -58,7 +58,7 @@ const data = {
                           The idea of the app is to provide board gamers with a way to organise and arrage 
                           group meetups. Users can create polls so they can decide what to play ahead of time.
                           That means less time debating what to play, more time playing!`,
-            skills: ['c#','ASP.NET Core', 'bootstrap', 'jquery', 'ajax', 'sqlserver', 'entity framework'],
+            skills: ['c#','asp.net-core', 'bootstrap','js', 'jquery', 'ajax', 'sql-server', 'entity-framework'],
             github: 'https://github.com/Zakalvve/Lets-Game',
             site: ''
         },
@@ -71,7 +71,7 @@ const data = {
                           played on the Nokia 3410. This version features multi layers 
                           levels, powerups and even local multiplayer so you can go head to 
                           head against your friends!`,
-            skills: ['c#','Unity'],
+            skills: ['c#','unity'],
             github: '',
             site: ''
         }

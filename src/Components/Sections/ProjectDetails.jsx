@@ -23,7 +23,7 @@ const ProjectDetails = ({project}) => {
                     <div className='relative z-10 flex h-full flex-col justify-end gap-4'>
                         <Date date={project.date} />
                         <Heading className='mb-0'>{project.name}</Heading>
-                        <div className='flex flex-row gap-2'>
+                        <div className='flex flex-row gap-2 flex-wrap'>
                             {project.skills.map((skill, i) => (
                                 <Pill key={i} className='bg-neon-green text-space-500'>{skill}</Pill>
                             ))}
