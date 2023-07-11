@@ -3,7 +3,7 @@ import Container from "../UI/Container";
 import { Caption, Heading } from "../UI/Text";
 import { projectsData } from "../../Data/data";
 import ProjectCards from "../ProjectCards";
-
+import { shuffleArray } from "../../Library/Utils";
 const Projects = ({themeColor}) => {
     return (
         <section id='projects' className='bg-space-600 relative z-10 w-full py-20 mb-[-2px]'>
@@ -17,7 +17,7 @@ const Projects = ({themeColor}) => {
                     </Heading>
                 </div>
             
-                <ProjectCards themeColor={themeColor} projects={projectsData} />
+                <ProjectCards themeColor={themeColor} projects={shuffleArray(projectsData)} />
             </Container>
         </section>
     );
