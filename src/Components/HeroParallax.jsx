@@ -1,19 +1,19 @@
 import React from "react";
 import assets from '../Assets/assets'
+import Image from "./UI/Image";
+import Picture from "./UI/Picture";
 
 const HeroParallax = () => {
-    const { Hero } = assets.images;
     return (
-        <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 -z-50 overflow-hidden bg-primary bg-[size:103%_103%] bg-no-repeat object-fill"
-            style={{
-                backgroundImage: `url(${Hero})`,
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-                position: 'center top'
-            }}
-        />
+        <div className='absolute inset-0 w-full h-full -z-50'>
+            <Picture sources={assets.images.HeroImg.sources}>
+                <Image 
+                    aria-hidden 
+                    className='w-[103%] h-[103%] object-cover object-center pointer-events-none'
+                    {...assets.images.HeroImg.img}
+                />
+            </Picture>
+        </div>
     )
 }
 

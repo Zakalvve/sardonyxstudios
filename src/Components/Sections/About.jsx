@@ -5,7 +5,6 @@ import React from 'react';
 import { images } from '../../Assets/assets'
 
 const About = ({themeColor}) => {
-    const itsMe = images.MeOnGuitarImage;
     return (
         <section id='about' className='bg-space-600 relative z-10 flex lg:min-h-screen w-full flex-col items-center lg:flex-row-reverse mb-[-2px]'>
             <Container>
@@ -22,9 +21,9 @@ const About = ({themeColor}) => {
                 </div>
             </Container>
             <Image 
-                className='inset-0 max-h-screen w-full object-cover object-center lg:absolute lg:h-full lg:w-1/2' 
-                src={itsMe}
+                className='inset-0 max-h-screen w-full object-cover object-top lg:absolute lg:h-full lg:w-1/2' 
                 loading='lazy'
+                {...images.MeImg}
             />
         </section>
     );

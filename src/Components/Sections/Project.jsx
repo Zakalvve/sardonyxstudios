@@ -7,6 +7,7 @@ import { projectsData } from '../../Data/data';
 import { shuffleArray } from '../../Library/Utils';
 import Pill from '../UI/Pill';
 import { useNavigate } from 'react-router-dom';
+import Picture from '../UI/Picture';
 
 const Project = ({project}) => {
     const navigate = useNavigate();
@@ -19,11 +20,11 @@ const Project = ({project}) => {
 
     return (
         <>
-            <section id='project' className='relative py-[10vh] flex min-h-screen w-full bg-space-600 after:absolute after:inset-0 after:h-full after:bg-gradient-to-t after:from-space-600 after:via-black/80 after:to-black/70'>
-                <Image src={project.image} className='absolute inset-0 w-full h-full object-cover object-center'/>
+            <section id='project' className='relative py-[10vh] flex min-h-screen w-full bg-space-600 after:absolute after:inset-0 after:h-full after:bg-gradient-to-t after:from-space-600 after:via-black/60 after:to-black/10'>
+                <Image {...project.image.img} className='absolute inset-0 w-full h-full object-cover object-center'/>
                 <Container>
                     <div className='relative z-10 flex h-full flex-col justify-end gap-4'>
-                        <Date date={project.date} />
+                        <Date className='text-white' date={project.date} />
                         <Heading className='mb-0'>{project.name}</Heading>
                         <div className='flex flex-row gap-2 flex-wrap'>
                             {project.skills.map((skill, i) => (
@@ -55,7 +56,7 @@ const Project = ({project}) => {
                 <Container>
                     <div className='flex flex-col items-center text-center'>
                         <Caption themeColor='neon-red' className='mb-8'>Other Projects</Caption>
-                        <ProjectCards projects={otherProjects}/>
+                        <ProjectCards themeColor='neon-red' projects={otherProjects}/>
                     </div>
                 </Container>
             </section>
