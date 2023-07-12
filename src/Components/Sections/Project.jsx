@@ -7,7 +7,6 @@ import { projectsData } from '../../Data/data';
 import { shuffleArray } from '../../Library/Utils';
 import Pill from '../UI/Pill';
 import { useNavigate } from 'react-router-dom';
-import Picture from '../UI/Picture';
 
 const Project = ({project}) => {
     const navigate = useNavigate();
