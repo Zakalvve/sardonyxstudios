@@ -39,7 +39,11 @@ const Paragraph = ({children, className, ...props}) => {
 }
 const Date = ({date, className, ...props}) => {
     return (
-        <p className="text-sm text-space-100">{formatDate(date)}</p>
+        <p 
+            className={reduceClasses('text-sm text-space-100', className)}
+        >
+            {formatDate(date)}
+        </p>
     )
 }
 
