@@ -22,6 +22,9 @@ import JournalPortrait from './mihaelas-journal-portrait-1035w.webp'
 import HeroMobile from './hero-desktop-1024w.webp'
 import HeroDesktop from './hero-desktop-3840w.webp'
 
+import AboutHeroS from './about-hero-1280w.webp'
+import AboutHeroL from './about-hero-1920w.webp'
+
 
 //images: object
 //contains the images used on the site and the data struture used to ensure they are fully responsive
@@ -113,6 +116,21 @@ const assets = {
                     {
                         media: '(min-width: 0px)',
                         srcSet: `${HeroMobile} 1024w, ${HeroDesktop} 3840w`,
+                        sizes: '100vw',
+                    }
+                ]
+            }
+        },
+        AboutHero: {
+            img: {
+                src: AboutHeroS,
+                alt: "Deep space. Edge of a nebula"
+            },
+            sources: {
+                landscape: [
+                    {
+                        media: '(min-width: 0px)',
+                        srcSet: `${AboutHeroS} 1280w, ${AboutHeroL} 1920w`,
                         sizes: '100vw',
                     }
                 ]

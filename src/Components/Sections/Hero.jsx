@@ -3,10 +3,12 @@ import Container from '../UI/Container';
 import HeroParallax from '../HeroParallax';
 import React from 'react';
 
-const Hero = () => {
+const Hero = ({children, heroData}) => {
+    const renderDefault = !children;
     return (
         <section className='sticky inset-0 flex h-screen w-full flex-col justify-center pt-[9rem] pb-28'>
-            <HeroParallax/>
+            {renderDefault && (<HeroParallax/>)}
+            {children}
             <Container>
                 <div className='flex flex-col items-center justify-center'>
                     <h1 className='text-center font-sans 
@@ -19,10 +21,10 @@ const Hero = () => {
                         2xl:text-8xl
                 
                         font-bold leading-tight  md:leading-tight lg:leading-tight'>
-                        New Frontiers<br />in Programming<br />and Design
+                        {heroData.header}
                     </h1>
-                    <ButtonLink to='/#projects' theme='blue' size='large' grow={true} className='mt-12 bg-space-500/90 backdrop-blur-md supports-[backdrop-filter]:bg-space-500/70 backdrop-blur-md supports-[backdrop-filter]:bg-space-500/70'>
-                        See what I've done
+                    <ButtonLink to={heroData.buttonLink} theme={heroData.buttonStyle} size={heroData.buttonSize} grow={true} className='mt-12 bg-space-500/90 backdrop-blur-md supports-[backdrop-filter]:bg-space-500/70 backdrop-blur-md supports-[backdrop-filter]:bg-space-500/70 min-w-[30%]'>
+                        {heroData.buttonText}
                     </ButtonLink>
                 </div>
             </Container>

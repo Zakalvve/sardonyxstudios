@@ -24,6 +24,20 @@ const data = {
                 href: '/#contact'
             }
         ],
+        mainHero: {
+            header: (<>New Frontiers<br />in Programming<br />and Design</>),
+            buttonText: "See what I've done",
+            buttonLink: '/#projects',
+            buttonStyle: 'blue',
+            buttonSize: 'large'
+        },
+        aboutHero: {
+            header: (<>Always Looking<br/>Forward</>),
+            buttonText: "Home",
+            buttonLink: '/',
+            buttonStyle: 'primary',
+            buttonSize: 'medium'
+        }
     },
     socials: [
         {
