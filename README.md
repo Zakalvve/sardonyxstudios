@@ -4,7 +4,7 @@ I created this site to serve as a platform for promoting myself and my coding ab
 This site was created with React and Tailwind CSS primarily.
 
 ## Reporting Issues
-If you see any bugs in the site please let me know by submitting an issue!
+If you see any bugs in the site please let me know by submitting an [issue](https://github.com/Zakalvve/sardonyxstudios/issues)!
 
 ## Running Locally
 
