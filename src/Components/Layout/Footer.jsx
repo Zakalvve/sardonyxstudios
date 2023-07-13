@@ -3,7 +3,6 @@ import Container from "../UI/Container";
 import { siteLinks } from "../../Library/Utils";
 import { socials, studio } from "../../Data/data";
 import { HashLink as Link } from 'react-router-hash-link';
-import { scrollToTop } from "../UI/Scrolling";
 
 const Footer = () => {
     const links = siteLinks();
@@ -28,7 +27,7 @@ const Footer = () => {
             <Container>
                 <div className='grid grid-cols-1 items-center justify-center gap-6 py-12 lg:grid-cols-3'>
                     <div className='flex text-space-100 justify-center gap-x-6 lg:order-last lg:justify-end'>
-                        <button onClick={scrollToTop}>Secondary Link</button>
+                        <Link to='/about/#about-site'><small className="text-sm font-medium text-space-100">SITE INFO</small></Link>
                     </div>
                     <ul aria-label='socials'  className="flex justify-center gap-x-2">
                         {socials.map(({text, href, icon: Icon}, i) => (
