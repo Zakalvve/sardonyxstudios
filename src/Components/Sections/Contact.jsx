@@ -11,7 +11,7 @@ const Contact = ({themeColor}) => {
                     <div className='basis-full lg:self-center'>
                         <Caption themeColor={themeColor}>Contact Me</Caption>
                         <Heading>Want to reach out?</Heading>
-                        <Paragraph>If you have any questions or are interesting in hiring you can contact me here. I love to discuss new possibilities.</Paragraph>
+                        <Paragraph>I don't bite so if you have any questions or want to get in touch send me a message. I love discussing new possibilities!</Paragraph>
                     </div>
                     <div className='mt-10 basis-full lg:ml-10 lg:mt-0 xl:ml-20'>
                         <ContactForm themeColor={themeColor}/>
