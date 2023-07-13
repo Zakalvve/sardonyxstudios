@@ -14,4 +14,4 @@ In the terminal type `npm install` to install dependencies.
 
 You can then run the app using `npm start` or build it with `npm run build`.
 
-This app uses (Email Js)[https://www.emailjs.com/] to send email. If you try to run this setting locally you will need to add a .env file with the relavent API keys/ids from your account. See their website for more info.
+This app uses (https://www.emailjs.com/)[Email Js] to send email. If you try to run this setting locally you will need to add a .env file with the relavent API keys/ids from your account. See their website for more info.
