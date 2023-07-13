@@ -95,9 +95,8 @@ const Button = React.forwardRef(({theme, size, grow, className, children, ...pro
                 theme,
                 size,
                 grow,
-                hasMouse,
-                className
-            }))}
+                hasMouse
+            }), className)}
             {...props}
         >
             <svg className='h-full absolute w-full top-0 left-0'>

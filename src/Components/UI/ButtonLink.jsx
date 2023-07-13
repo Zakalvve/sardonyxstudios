@@ -31,8 +31,7 @@ const ButtonLink = React.forwardRef(({theme, size, grow, className, children, ..
                 size,
                 grow,
                 hasMouse,
-                className
-            }))}
+            }), className)}
             {...props}
         >
             <svg className='h-full absolute w-full top-0 left-0'>
