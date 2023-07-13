@@ -4,80 +4,119 @@ import SnakeImageZoomS from './extreme-snake-zoom-800w.webp';
 import SnakeImageZoomL from './extreme-snake-zoom-1350w.webp';
 import SnakeImageS from './extreme-snake-desktop-1920w.webp';
 import SnakeImageL from './extreme-snake-desktop-2238w.webp';
+import SnakeImagePortraitS from './extreme-snake-portrait-850w.webp'
+import SnakeImagePortraitL from './extreme-snake-portrait-1080w.webp'
 
 import LetsGameS from './letsgame-desktop-1024w.webp';
 import LetsGameL  from './letsgame-desktop-1906w.webp';
+import LetsGamePortraitS from './letsgame-portrait-800w.webp'
+import LetsGamePortraitL from './letsgame-portrait-1080w.webp'
 
 import MeMobile from './me-768w.webp';
 import MeDesktop from './me-1200w.webp'
 
-import JournalZoomS from './mihaelas-journal-zoom-800.webp';
-import JournalZoomL from './mihaelas-journal-zoom-1565w.webp';
+import JournalZoomS from './mihaelas-journal-desktop-800.webp';
+import JournalZoomL from './mihaelas-journal-desktop-1565w.webp';
+import JournalPortrait from './mihaelas-journal-portrait-1035w.webp'
 
 import HeroMobile from './hero-desktop-1024w.webp'
 import HeroDesktop from './hero-desktop-3840w.webp'
 
+
+//images: object
+//contains the images used on the site and the data struture used to ensure they are fully responsive
+
+//icons: object
+//contains the icons used on the site
+
 const assets = {
-    images2: {
-        
-    },
     images: {
         ExtremeSnake: {
             img: {
                 src: SnakeImageZoomS,
                 alt: "Snake Game Menu"
             },
-            sources: [
-                {
-                    media: '(max-width: 899px)',
-                    srcSet: `${SnakeImageZoomS} 800w, ${SnakeImageZoomL} 1350w`,
-                    sizes: '(max-width: 500px) 800px, 1350px'
-                },
-                {
-                    media: '(min-width: 900px)',
-                    srcSet: `${SnakeImageS} 1080w, ${SnakeImageL} 2238w`,
-                    sizes: '(max-width: 1920px) 1080w, 2238w'
-                }
-            ]
+            sources: {
+                portrait:[
+                    {
+                        media: '(orientation:portrait)',
+                        srcSet: `${SnakeImagePortraitS} 850w, ${SnakeImagePortraitL} 1080w`,
+                        sizes: '(max-width: 500px) 800px, 1350px'
+                    },
+                ],
+                landscape: [
+                    {
+                        media: '(max-width: 899px)',
+                        srcSet: `${SnakeImageZoomS} 800w, ${SnakeImageZoomL} 1350w`,
+                        sizes: '(max-width: 500px) 800px, 1350px'
+                    },
+                    {
+                        media: '(min-width:0px)',
+                        srcSet: `${SnakeImageS} 1080w, ${SnakeImageL} 2238w`,
+                        sizes: '(max-width: 1920px) 1080w, 2238w'
+                    }
+                ]
+            }
         },
         LetsGame: {
             img: {
                 src: LetsGameS,
                 alt: "Lets Game App. Users Hub"
             },
-            sources: [
-                {
-                    media: '(min-width: 0px)',
-                    srcSet: `${LetsGameS} 1024ww, ${LetsGameL} 1906w`,
-                    sizes: '100vw'
-                },
-            ]
+
+            sources: {
+                portrait:[
+                    {
+                        media: '(orientation:portrait)',
+                        srcSet: `${LetsGamePortraitS} 850w, ${LetsGamePortraitL} 1080w`,
+                        sizes:'100vw'
+                    }
+                ],
+                landscape: [
+                    {
+                        media: '(min-width: 0px)',
+                        srcSet: `${LetsGameS} 1024ww, ${LetsGameL} 1906w`,
+                        sizes: '100vw'
+                    }
+                ]
+            }
         },
         MihaelasJournal: {
             img: {
                 src: JournalZoomS,
                 alt: "Mihaela's Journal Homepage"
             },
-            sources: [
-                {
-                    media: '(min-width: 0px)',
-                    srcSet: `${JournalZoomS} 800w, ${JournalZoomL} 1565w`,
-                    sizes:'100vw'
-                }
-            ]
+            sources: {
+                portrait: [
+                    {
+                        media: '(orientation:portrait)',
+                        srcSet:`${JournalPortrait}`,
+                        sizes: `100vw`
+                    },
+                ],
+                landscape: [
+                    {
+                        media: '(min-width: 0px)',
+                        srcSet: `${JournalZoomS} 800w, ${JournalZoomL} 1565w`,
+                        sizes:'100vw'
+                    }
+                ]
+            }
         },
         HeroImg: {
             img: {
                 src: HeroMobile,
                 alt: "Distant planet hangs in sky, mountains frame it. Vapourwave style"
             },
-            sources: [
-                {
-                    media: '(min-width: 0px)',
-                    srcSet: `${HeroMobile} 1024w, ${HeroDesktop} 3840w`,
-                    sizes: '100vw',
-                }
-            ]
+            sources: {
+                landscape: [
+                    {
+                        media: '(min-width: 0px)',
+                        srcSet: `${HeroMobile} 1024w, ${HeroDesktop} 3840w`,
+                        sizes: '100vw',
+                    }
+                ]
+            }
         },
         MeImg: {
             srcSet:`${MeMobile} 748w, ${MeDesktop} 1200w`,

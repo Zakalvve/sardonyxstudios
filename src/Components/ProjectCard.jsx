@@ -7,10 +7,9 @@ import SkillsList from "./SkillsList";
 
 const ProjectCard = ({themeColor, project}) => {
     return (
-        <Link to={`/projects/${project.id}`} className='relative rounded-lg flex flex-col flex-1 border-space-400 border bg-space-500 shadow-card duration-300 md:hover:scale-[1.03] overflow-hidden md:basis-[30vw] 2xl:basis-[20vw]'
-        >
-            <Picture sources={project.image.sources}>
-                <Image {...project.image.img} className='w-full aspect-video object-cover object-centerborder-b border-space-400'/>
+        <Link to={`/projects/${project.id}`} className='relative rounded-lg flex flex-col flex-1 border-space-400 border bg-space-500 shadow-card duration-300 md:hover:scale-[1.03] overflow-hidden md:basis-[30vw] 2xl:basis-[20vw]'>
+            <Picture sources={project.image.sources.landscape}>
+                <Image {...project.image.img} className='w-full aspect-video object-cover object-top border-b border-space-400'/>
             </Picture>
             <div className='grow py-6 px-4 md:px-8 flex flex-col gap-y-2 md:gap-y-4'>
                 <Date date={project.date}/>

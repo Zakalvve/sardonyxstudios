@@ -10,7 +10,7 @@ import { icons } from "../../Assets/assets";
 import { logo } from "../../Data/data";
 import { scrollToTop } from "../UI/Scrolling";
 
-const NavBar = ({isBackgroundTranhsparent = true}) => {
+const NavBar = ({isBackgroundTransparent = true}) => {
     const windowHeight = useWindowHeight();
     const scrollPos = useScrollPosition(60);
 
@@ -20,7 +20,7 @@ const NavBar = ({isBackgroundTranhsparent = true}) => {
     }
 
     const scrolledDownOnePage = scrollPos > windowHeight - 1;
-    const isBackgroundBlurred = !isBackgroundTranhsparent || scrolledDownOnePage || isOpen;
+    const isBackgroundBlurred = !isBackgroundTransparent || scrolledDownOnePage || isOpen;
 
     const links = siteLinks('about', 'projects');
 

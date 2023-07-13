@@ -6,12 +6,12 @@ import Loading from "../Components/Layout/Loading";
 import ToTopButton from '../Components/UI/Scrolling';
 import useElementSize from '../Hooks/UseElementSize';
 
-const Layout = ({className, children}) => {
+const Layout = ({className, children, isNavTransparent}) => {
     const [app, appRect] = useElementSize();
     return (
         <div ref={app} className={reduceClasses('text-white', className)}>
             <Loading />
-            <NavBar/>
+            <NavBar isBackgroundTransparent={isNavTransparent}/>
             <ToTopButton pageHeight={appRect.height} />
             {children}
             <Footer/>

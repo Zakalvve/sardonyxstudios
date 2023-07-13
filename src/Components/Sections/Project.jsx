@@ -2,11 +2,12 @@ import Image from '../UI/Image';
 import Container from '../UI/Container'
 import { icons } from '../../Assets/assets';
 import { Heading, Date, Paragraph, Caption} from '../UI/Text';
-import ProjectCards from '../ProjectCards'
+import Projects from './Projects';
 import { projectsData } from '../../Data/data';
 import { shuffleArray } from '../../Library/Utils';
 import Pill from '../UI/Pill';
 import { useNavigate } from 'react-router-dom';
+import Picture from '../UI/Picture';
 
 const Project = ({project}) => {
     const navigate = useNavigate();
@@ -19,8 +20,10 @@ const Project = ({project}) => {
 
     return (
         <>
-            <section id='project' className='relative py-[10vh] flex min-h-screen w-full bg-space-600 after:absolute after:inset-0 after:h-full after:bg-gradient-to-t after:from-space-600 after:via-black/60 after:to-black/10'>
-                <Image {...project.image.img} className='absolute inset-0 w-full h-full object-cover object-center'/>
+            <section id='hero' className='relative py-[10vh] flex min-h-screen w-full bg-space-600 after:absolute after:inset-0 after:h-full after:bg-gradient-to-t after:from-space-600 after:via-black/60 after:to-black/10'>
+                <Picture sources={[...project.image.sources.portrait, ...project.image.sources.landscape]}>
+                    <Image {...project.image.img} className='absolute inset-0 w-full h-full object-cover object-top'/>
+                </Picture>
                 <Container>
                     <div className='relative z-10 flex h-full flex-col justify-end gap-4'>
                         <Date className='text-white' date={project.date} />
@@ -37,7 +40,7 @@ const Project = ({project}) => {
                     </div>
                 </Container>
             </section>
-            <section className='pt-8 bg-space-600'>
+            <section id='details' className='pt-8 bg-space-600'>
                 <Container>
                     <Caption></Caption>
                     <Paragraph className='w-full'>{project.description}</Paragraph>
@@ -51,14 +54,7 @@ const Project = ({project}) => {
                     </div>
                 </Container>
             </section>
-            <section className='py-20 bg-space-600'>
-                <Container>
-                    <div className='flex flex-col items-center text-center'>
-                        <Caption themeColor='neon-red' className='mb-8'>Other Projects</Caption>
-                        <ProjectCards themeColor='neon-red' projects={otherProjects}/>
-                    </div>
-                </Container>
-            </section>
+            <Projects themeColor='neon-red' projects={otherProjects}/>
         </>
     )
 }
