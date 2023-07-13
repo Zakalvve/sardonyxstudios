@@ -1,6 +1,7 @@
 import { createHashRouter } from "react-router-dom";
 import HomePage from "./HomePage";
 import ProjectPage, { projectLoader } from "./ProjectPage";
+import AboutPage from "./AboutPage";
 import ErrorPage from "./ErrorPage";
 import App from "../Components/App";
 
@@ -18,6 +19,10 @@ const router = createHashRouter([
                 path: 'projects/:id',
                 element: (<ProjectPage/>),
                 loader: projectLoader
+            },
+            {
+                path: 'about',
+                element: (<AboutPage />)
             }
         ]
     }
