@@ -1,7 +1,7 @@
 # Sardonxy Studios Portfolio Site
 I created this site to serve as a platform for promoting myself and my coding abilities. As time goes on I hope to add to and improve this site as my skill improves.
 
-This site was created with React and Tailwind CSS primarily.
+This site was primarily created using [React](https://react.dev/) and [Tailwind CSS](https://tailwindcss.com/).
 
 ## Reporting Issues
 If you see any bugs in the site please let me know by submitting an [issue](https://github.com/Zakalvve/sardonyxstudios/issues)!
