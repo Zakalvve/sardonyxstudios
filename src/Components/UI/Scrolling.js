@@ -43,20 +43,6 @@ const ToTopButton = ({pageHeight, children, footerHeight, ...props}) => {
     }
   },[scrollPos, reachedBottom, finalBottom, bottom]);
 
-  const screenHeight = window.innerHeight;
-  const debug = {
-    button,
-    scrollPos,
-    hideButton,
-    bottom,
-    reachedBottom,
-    finalBottom,
-    pageHeight,
-    screenHeight
-  };
-
-  console.log(debug);
-
   return (
     <motion.button 
       ref={button} 

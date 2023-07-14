@@ -13,8 +13,7 @@ const Layout = ({className, children, isNavTransparent}) => {
 
     useEffect(() => {
         if (footer.current) setFooterHeight(footer.current.getBoundingClientRect().height)
-    },[]);
-    console.log(footerHeight);
+    },[footer]);
 
     return (
         <div ref={app} className={reduceClasses('text-white', className)}>

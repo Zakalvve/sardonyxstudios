@@ -8,7 +8,7 @@ import SkillsList from "./SkillsList";
 const ProjectCard = ({themeColor, project}) => {
     const sources = project.image.sources.thumb ? project.image.sources.thumb : project.image.sources.landscape;
     return (
-        <Link to={`/projects/${project.id}`} className='relative rounded-lg flex flex-col flex-1 border-space-400 border bg-space-500 shadow-card duration-300 md:hover:scale-[1.03] overflow-hidden md:basis-[30vw] 2xl:basis-[20vw]'>
+        <Link to={`/projects/${project.id}`} className='relative rounded-lg flex flex-col flex-1 border-space-400 border bg-space-500 shadow-card duration-300 md:hover:scale-[1.03] overflow-hidden md:basis-[30vw] 2xl:basis-[20vw] min-w-[40%]'>
             <Picture sources={sources}>
                 <Image {...project.image.img} className='w-full aspect-video object-cover object-top border-b border-space-400'/>
             </Picture>
