@@ -4,7 +4,7 @@ import { siteLinks } from "../../Library/Utils";
 import { socials, studio } from "../../Data/data";
 import { HashLink as Link } from 'react-router-hash-link';
 
-const Footer = React.forwardRef(({},ref) => {
+const Footer = React.forwardRef((props,ref) => {
     const links = siteLinks();
     const [currentYear] = useState(() => new Date().getFullYear());
 

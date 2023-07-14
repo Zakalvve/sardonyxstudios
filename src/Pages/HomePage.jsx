@@ -15,7 +15,7 @@ const HomePage = () => {
     window.toggleParallax = () => {
         setByPassParallax(!byPassParallax);
     }
-    
+
     return (
         <main id="main">
             <Hero heroData={siteData.mainHero} byPassParallax={byPassParallax}/>
