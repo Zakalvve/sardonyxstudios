@@ -3,6 +3,7 @@ import { twMerge } from 'tailwind-merge';
 import emailjs from '@emailjs/browser';
 import { clsx } from 'clsx';
 import { z } from 'zod';
+import { cva } from 'class-variance-authority';
 
 export const reduceClasses = (...inputs) => {
     return twMerge(clsx(inputs));
@@ -55,4 +56,20 @@ export const shuffleArray = (array, passes = 1) => {
         }
     }
     return shuffledArray;
+}
+
+export const themeVariants = cva(
+    'selection:text-space-600', 
+    {
+        variants: {
+            selection: {
+                'neon-blue': 'selection:bg-neon-blue important',
+                'neon-red': 'selection:bg-neon-red',
+                'neon-green': 'selection:bg-neon-green'
+            }
+    }
+});
+
+export const remToPixels = (rem) => {
+    return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
 }
