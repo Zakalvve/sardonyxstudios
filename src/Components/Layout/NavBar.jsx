@@ -31,7 +31,7 @@ const NavBar = ({isBackgroundTransparent = true}) => {
                                     : 'border-transparent bg-transparent'
             )}>
                 <Container>
-                    <div className="grid grid-cols-3">
+                    <div className="grid grid-cols-nav">
                         <div className="flex items-center md:hidden">
                             <MobileNav.Toggle isOpen={isOpen} toggleOpen={toggle}/>
                         </div>

@@ -36,6 +36,9 @@ module.exports = {
           500: '#161b22',
           600: '#0d1117'
         }
+      },
+      gridTemplateColumns: {
+        nav: '1fr 15em 1fr'
       }
     }
   },
