@@ -12,7 +12,7 @@ const HomePage = () => {
     useEffect(() => setNavTransparency(true), [setNavTransparency]);
     return (
         <main id="main">
-            <Hero heroData={siteData.mainHero}/>
+            <Hero heroData={siteData.mainHero} byPassParallax={true}/>
             <About themeColor='neon-green'/>
             <Projects themeColor='neon-red' projects={projectsData}/>
             <Contact themeColor='neon-blue'/>

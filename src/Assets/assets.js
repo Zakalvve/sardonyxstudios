@@ -34,6 +34,10 @@ import JournalEntryL from './mihaelas-journal-entry-1366w.webp';
 
 import HeroMobile from './hero-desktop-1024w.webp';
 import HeroDesktop from './hero-desktop-3840w.webp';
+import HeroParallaxBG from './hero-parallax-bg.webp';
+import HeroParallaxL1 from './hero-parallax-layer1.webp';
+import HeroParallaxL2 from './hero-parallax-layer2.webp';
+import HeroParallaxL3 from './hero-parallax-layer3.webp';
 
 import AboutHeroS from './about-hero-1280w.webp';
 import AboutHeroL from './about-hero-1920w.webp';
@@ -292,6 +296,35 @@ const assets = {
                         media: '(min-width: 0px)',
                         srcSet: `${HeroMobile} 1024w, ${HeroDesktop} 3840w`,
                         sizes: '100vw',
+                    }
+                ]
+            },
+            parallax: {
+                img: {
+                    src: HeroParallaxBG,
+                    alt: "Distant planet hangs in sky, mountains frame it. Vapourwave style"
+                },
+                layers: [
+                    {
+                        img: {
+                            src: HeroParallaxL1,
+                            alt: "Parallax Layer"
+                        }, 
+                        z: '-z-40'
+                    },
+                    {
+                        img: {
+                            src: HeroParallaxL2,
+                            alt: "Parallax Layer"
+                        },
+                        z: '-z-30'
+                    },
+                    {
+                        img: {
+                            src: HeroParallaxL3,
+                            alt: "Parallax Layer"
+                        },
+                        z: '-z-20'
                     }
                 ]
             }

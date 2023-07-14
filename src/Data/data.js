@@ -26,6 +26,7 @@ const data = {
         ],
         mainHero: {
             header: (<>New Frontiers<br />in Programming<br />and Design</>),
+            image: images.HeroImg,
             buttonText: "See what I've done",
             buttonLink: '/#projects',
             buttonStyle: 'blue',
@@ -33,6 +34,7 @@ const data = {
         },
         aboutHero: {
             header: (<>Always Looking<br/>Forward</>),
+            image: images.AboutHero,
             buttonText: "",
             buttonLink: '/',
             buttonStyle: 'primary',

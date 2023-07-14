@@ -15,11 +15,11 @@ const AboutPage = () => {
         <main id="main">
             <Hero heroData={siteData.aboutHero}>
                 <div className='absolute inset-0 w-full h-full -z-50'>
-                    <Picture sources={images.AboutHero.sources.landscape}>
+                    <Picture sources={siteData.aboutHero.image.sources.landscape}>
                         <Image 
                             aria-hidden 
                             className='w-[103%] h-[103%] object-cover object-center pointer-events-none'
-                            {...images.AboutHero.img}
+                            {...siteData.aboutHero.image.img}
                         />
                     </Picture>
                 </div>

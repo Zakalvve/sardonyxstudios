@@ -2,12 +2,25 @@ import ButtonLink from '../UI/ButtonLink';
 import Container from '../UI/Container';
 import HeroParallax from '../HeroParallax';
 import React from 'react';
+import Picture from '../UI/Picture';
+import Image from '../UI/Image';
 
-const Hero = ({children, heroData}) => {
-    const renderDefault = !children;
+const Hero = ({children, heroData, byPassParallax = true}) => {
+    const renderDefault = !children && matchMedia('(pointer:fine)').matches && !byPassParallax;
     return (
         <section className='sticky inset-0 flex h-screen w-full flex-col justify-center pt-[9rem] pb-28'>
             {renderDefault && (<HeroParallax/>)}
+            {byPassParallax && (
+                <div className='absolute inset-0 w-full h-full -z-50'>
+                    <Picture sources={heroData.image.sources.landscape}>
+                        <Image 
+                            aria-hidden 
+                            className='w-[103%] h-[103%] object-cover object-center pointer-events-none'
+                            {...heroData.image.img}
+                        />
+                    </Picture>
+                </div>
+            )}
             {children}
             <Container>
                 <div className='flex flex-col items-center justify-center'>
