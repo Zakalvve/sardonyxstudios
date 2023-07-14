@@ -1,7 +1,7 @@
 import Image from '../UI/Image';
 import Container from '../UI/Container'
 import { icons } from '../../Assets/assets';
-import { Heading, Date, Paragraph, Caption} from '../UI/Text';
+import { Heading, Date, Caption} from '../UI/Text';
 import Projects from './Projects';
 import { projectsData } from '../../Data/data';
 import { shuffleArray } from '../../Library/Utils';
@@ -42,8 +42,27 @@ const Project = ({project}) => {
             </section>
             <section id='details' className='pt-8 bg-space-600'>
                 <Container>
-                    <Caption></Caption>
-                    <Paragraph className='w-full'>{project.description}</Paragraph>
+                    <project.CardDescription className='flex flex-col gap-4 mb-16' />
+
+                    <div className='flex flex-col w-full pt-8 gap-10 lg:gap-20'>
+                        {project.bodySections && project.bodySections.map((section, i) => {
+                            const display = i % 2 === 0 ? 'lg:flex lg:flex-row' : 'lg:flex lg:flex-row-reverse';
+                            return (
+                                <div key={i} className={`${display} lg:min-h-[30vh] lg:items-center lg:gap-10`}>
+                                    <div className='flex flex-col lg:max-w-[50%] text-center lg:text-left'>
+                                        <Caption themeColor={'neon-blue'}>{section.title}</Caption>
+                                        <section.Body />
+                                    </div>
+                                    {section.image && (
+                                        <Picture className='w-[50%]' sources={section.image.sources}>
+                                            <Image className='inset-0 w-[50%] lg:w-full object-cover object-top mx-auto aspect-video rounded-lg' {...section.image.img}/>
+                                        </Picture>
+                                    )}
+                                </div>
+                            );
+                        })}
+                    </div>
+
                     <div id='links' className='pt-12 flex flex-col gap-2'>
                         {project.github && (
                             <a href={project.github} className='text-neon-blue hover:underline'>Check out this project on Github</a>

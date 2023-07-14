@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "./UI/Image";
 import Picture from "./UI/Picture";
-import { Caption, Paragraph, Date } from "./UI/Text";
+import { Caption, Date } from "./UI/Text";
 import { Link } from "react-router-dom";
 import SkillsList from "./SkillsList";
 

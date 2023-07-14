@@ -23,9 +23,11 @@ const Hero = ({children, heroData}) => {
                         font-bold leading-tight  md:leading-tight lg:leading-tight'>
                         {heroData.header}
                     </h1>
-                    <ButtonLink to={heroData.buttonLink} theme={heroData.buttonStyle} size={heroData.buttonSize} grow={true} className='mt-12 bg-space-500/90 backdrop-blur-md supports-[backdrop-filter]:bg-space-500/70 backdrop-blur-md supports-[backdrop-filter]:bg-space-500/70 min-w-[30%]'>
-                        {heroData.buttonText}
-                    </ButtonLink>
+                    {heroData.buttonText && (
+                        <ButtonLink to={heroData.buttonLink} theme={heroData.buttonStyle} size={heroData.buttonSize} grow={true} className='mt-12 bg-space-500/90 backdrop-blur-md supports-[backdrop-filter]:bg-space-500/70 backdrop-blur-md supports-[backdrop-filter]:bg-space-500/70 min-w-[30%]'>
+                            {heroData.buttonText}
+                        </ButtonLink>
+                    )}
                 </div>
             </Container>
         </section>

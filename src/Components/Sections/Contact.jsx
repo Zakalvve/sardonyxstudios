@@ -2,10 +2,13 @@ import React from "react";
 import Container from "../UI/Container";
 import ContactForm from "../ContactForm";
 import { Caption, Heading, Paragraph } from "../UI/Text";
+import { reduceClasses } from "../../Library/Utils";
+import { themeVariants } from '../../Library/Utils';
 
 const Contact = ({themeColor}) => {
+    const selection = themeColor;
     return (
-        <section id='contact' className='bg-space-600 relative z-10 flex w-full items-center py-20'>
+        <section id='contact' className={reduceClasses(themeVariants({selection}), 'bg-space-600 relative z-10 flex w-full items-center py-20')}>
             <Container>
                 <div className='flex h-full w-full flex-col lg:flex-row'>
                     <div className='basis-full lg:self-center'>

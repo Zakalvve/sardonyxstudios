@@ -3,7 +3,6 @@ import useScrollPosition from '@react-hook/window-scroll';
 import { useWindowHeight, } from '@react-hook/window-size'
 import { reduceClasses, siteLinks } from "../../Library/Utils";
 import Container from "../UI/Container";
-import ButtonLink from "../UI/ButtonLink";
 import MobileNav from "./MobileNav";
 import { HashLink as Link } from "react-router-hash-link";
 import { icons } from "../../Assets/assets";
@@ -27,12 +26,12 @@ const NavBar = ({isBackgroundTransparent = true}) => {
     return (
         <header aria-label="Primary" className="fixed flex flex-col top-0 z-40 w-full">
             <div className={reduceClasses(
-                'border-b transition-colors duration-5000 py-2',
+                'border-b transition-colors duration-5000 py-4',
                 isBackgroundBlurred ? 'border-space-300 bg-space-600/80 backdrop-blur-md supports-[backdrop-filter]:bg-space-600/50'
                                     : 'border-transparent bg-transparent'
             )}>
                 <Container>
-                    <div className="flex space-between">
+                    <div className="grid grid-cols-3">
                         <div className="flex items-center md:hidden">
                             <MobileNav.Toggle isOpen={isOpen} toggleOpen={toggle}/>
                         </div>
@@ -41,7 +40,7 @@ const NavBar = ({isBackgroundTransparent = true}) => {
                                 <Link
                                     key={index}
                                     to={link.href}
-                                    className="relative py-1 underline underline-offset-4 decoration-transparent text-sm uppercase text-white transition-all duration-300 hover:decoration-white"
+                                    className="relative py-1 underline underline-offset-4 decoration-transparent text-md uppercase text-white transition-all duration-300 hover:decoration-white"
                                 >
                                     {link.label}
                                 </Link>
@@ -53,9 +52,9 @@ const NavBar = ({isBackgroundTransparent = true}) => {
                             </Link>
                         </div>
                         <div className="flex items-center justify-end">
-                            <ButtonLink  to='/#contact' theme='primary' size='small' onClick={() => setIsOpen(false)} className='hidden md:block bg-transparent hover:bg-transparent hover:border-transparent'>
+                            <Link  to='/#contact' theme='primary' size='small' onClick={() => setIsOpen(false)} className='hidden md:block decoration-transparent text-md uppercase text-white transition-all duration-300 hover:decoration-white underline underline-offset-4'>
                                 Contact
-                            </ButtonLink>
+                            </Link>
                             <Link to='/#contact' onClick={() => setIsOpen(false)} className='md:hidden'>
                                 <icons.Mail className='h-6 w-6'/>
                             </Link>

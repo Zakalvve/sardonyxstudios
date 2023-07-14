@@ -4,10 +4,13 @@ import Image from '../UI/Image';
 import React from 'react';
 import { images } from '../../Assets/assets'
 import ButtonLink from '../UI/ButtonLink';
+import { reduceClasses } from '../../Library/Utils';
+import { themeVariants } from '../../Library/Utils';
 
 const About = ({themeColor}) => {
+    const selection = themeColor;
     return (
-        <section id='about' className='bg-space-600 relative z-10 flex lg:min-h-screen w-full flex-col items-center lg:flex-row-reverse mb-[-2px]'>
+        <section id='about' className={reduceClasses(themeVariants({selection}), 'bg-space-600 relative z-10 flex lg:min-h-screen w-full flex-col items-center lg:flex-row-reverse mb-[-2px]')}>
             <Container>
                 <div className='w-full py-20 lg:flex'>
                     <div className='flex flex-col justify-center gap-8 lg:ml-auto lg:basis-1/2 lg:pl-10 xl:pl-20'>
@@ -21,10 +24,10 @@ const About = ({themeColor}) => {
                             </Paragraph>
                             <Paragraph>
                                 I have a passion for code which I picked up in my early years tinkering around with video game code and have since decided to turn that passion into a career. 
-                                My focus is on creating modern and beautiful full-stack web applications for a variety of purposes.
+                                My focus is on creating modern and beautiful full-stack web applications and indie video games.
                             </Paragraph>
                             <Paragraph>
-                                When I'm not working I enjoy music &#40;thats me playing the guitar!&#41; creating an immersive tabletop RPG experience as the GM for my friends playing games and going to the gym.
+                                When I'm not working I enjoy music &#40;thats me playing the guitar!&#41;, creating an immersive tabletop RPG experience for my friends, playing games and going to the gym.
                             </Paragraph>
                             <ButtonLink to='/about' className='max-w-[50%] mt-6 mx-auto' theme='green' size='medium'>Learn More</ButtonLink>
                     </div>

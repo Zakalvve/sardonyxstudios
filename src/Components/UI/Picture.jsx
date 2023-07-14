@@ -1,7 +1,7 @@
 import React from "react";
-const Picture = React.forwardRef(({sources, children}, ref) => {
+const Picture = React.forwardRef(({sources, children, ...props}, ref) => {
     return (
-        <picture>
+        <picture {...props}>
             {sources && sources.map(({...source}, i) => (
                     <source key={i} {...source} />
                 ))}

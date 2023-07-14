@@ -4,12 +4,12 @@ import { siteLinks } from "../../Library/Utils";
 import { socials, studio } from "../../Data/data";
 import { HashLink as Link } from 'react-router-hash-link';
 
-const Footer = () => {
+const Footer = React.forwardRef(({},ref) => {
     const links = siteLinks();
     const [currentYear] = useState(() => new Date().getFullYear());
 
     return (
-        <footer aria-label="Primary" className="relative z-10 w-full border-t border-space-400 bg-space-500 py-3 lg:py-5">
+        <footer ref={ref} aria-label="Primary" className="relative z-10 w-full border-t border-space-400 bg-space-500 py-3 lg:py-5">
             <Container>
                 <nav aria-label="Primary" className='flex justify-center gap-x-6 py-12'>
                     {links.map((link,index) => (
@@ -52,6 +52,6 @@ const Footer = () => {
             </Container>
         </footer>
     );
-}
+});
 
 export default Footer;
