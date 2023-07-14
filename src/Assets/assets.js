@@ -4,26 +4,50 @@ import SnakeImageZoomS from './extreme-snake-zoom-800w.webp';
 import SnakeImageZoomL from './extreme-snake-zoom-1350w.webp';
 import SnakeImageS from './extreme-snake-desktop-1920w.webp';
 import SnakeImageL from './extreme-snake-desktop-2238w.webp';
-import SnakeImagePortraitS from './extreme-snake-portrait-850w.webp'
-import SnakeImagePortraitL from './extreme-snake-portrait-1080w.webp'
+import SnakeImagePortraitS from './extreme-snake-portrait-850w.webp';
+import SnakeImagePortraitL from './extreme-snake-portrait-1080w.webp';
+import SnakeImageMultiplayerS from './extreme-snake-multiplayer-800w.webp';
+import SnakeImageMultiplayerL from './extreme-snake-multiplayer-1920w.webp';
+import SnakeImageActionS from './extreme-snake-action-800w.webp';
+import SnakeImageActionL from './extreme-snake-action-1920w.webp';
 
 import LetsGameS from './letsgame-desktop-1024w.webp';
 import LetsGameL  from './letsgame-desktop-1906w.webp';
-import LetsGamePortraitS from './letsgame-portrait-800w.webp'
-import LetsGamePortraitL from './letsgame-portrait-1080w.webp'
+import LetsGamePortraitS from './letsgame-portrait-800w.webp';
+import LetsGamePortraitL from './letsgame-portrait-1080w.webp';
+import LetsGameThumbS from './letsgame-thumb-800w.webp';
+import LetsGameThumbL from './letsgame-thumb-1297w.webp';
+import LetsGameEventS from './letsgame-event-800w.webp';
+import LetsGameEventL from './letsgame-event-1614w.webp';
+import LetsGameFriendsS from './letsgame-friends-800.webp';
+import LetsGameFriendsL from './letsgame-friends-1416.webp';
 
 import MeMobile from './me-768w.webp';
-import MeDesktop from './me-1200w.webp'
+import MeDesktop from './me-1200w.webp';
 
 import JournalZoomS from './mihaelas-journal-desktop-800.webp';
 import JournalZoomL from './mihaelas-journal-desktop-1565w.webp';
-import JournalPortrait from './mihaelas-journal-portrait-1035w.webp'
+import JournalPortrait from './mihaelas-journal-portrait-1035w.webp';
+import JournalAudioControls from './mihaelas-journal-audio-controls-369w.webp';
+import JournalEntryS from './mihaelas-journal-entry-800w.webp';
+import JournalEntryL from './mihaelas-journal-entry-1366w.webp';
 
-import HeroMobile from './hero-desktop-1024w.webp'
-import HeroDesktop from './hero-desktop-3840w.webp'
+import HeroMobile from './hero-desktop-1024w.webp';
+import HeroDesktop from './hero-desktop-3840w.webp';
 
-import AboutHeroS from './about-hero-1280w.webp'
-import AboutHeroL from './about-hero-1920w.webp'
+import AboutHeroS from './about-hero-1280w.webp';
+import AboutHeroL from './about-hero-1920w.webp';
+
+import FactoryL from './factor-simulator-desktop-2561w.webp';
+import FactoryS from './factor-simulator-desktop-1920w.webp';
+import FactoryPortraitS from './factor-simulator-portrait-850w.webp';
+import FactoryPortraitL from './factor-simulator-portrait-1508w.webp';
+import FactoryThumbS from './factor-simulator-thumb-800w.webp';
+import FactoryThumbL from './factor-simulator-thumb-1130w.webp';
+import FactoryResultsS from './factor-simulator-results-800w.webp';
+import FactoryResultsL from './factor-simulator-results-1514w.webp';
+import FactoryPatternsS from './factor-simulator-patterns-800w.webp';
+import FactoryPatternsL from './factor-simulator-patterns-1428w.webp';
 
 
 //images: object
@@ -58,6 +82,34 @@ const assets = {
                         srcSet: `${SnakeImageS} 1080w, ${SnakeImageL} 2238w`,
                         sizes: '(max-width: 1920px) 1080w, 2238w'
                     }
+                ],
+                thumb: [
+                ]
+            },
+            multiplayer: {
+                img: {
+                    src: SnakeImageMultiplayerS,
+                    alt: "Lets Game App. Users Hub"
+                },
+                sources: [
+                    {
+                        media: '(min-width: 0px)',
+                        srcSet: `${SnakeImageMultiplayerS} 800w, ${SnakeImageMultiplayerL} 1920w`,
+                        sizes:'100vw'
+                    }
+                ]
+            },
+            action: {
+                img: {
+                    src: SnakeImageActionS,
+                    alt: "Lets Game App. Users Hub"
+                },
+                sources: [
+                    {
+                        media: '(min-width: 0px)',
+                        srcSet: `${SnakeImageActionS} 800w, ${SnakeImageActionL} 1920w`,
+                        sizes:'100vw'
+                    }
                 ]
             }
         },
@@ -81,6 +133,52 @@ const assets = {
                         srcSet: `${LetsGameS} 1024ww, ${LetsGameL} 1906w`,
                         sizes: '100vw'
                     }
+                ],
+                thumb: [
+                    {
+                        media: '(min-width: 0px)',
+                        srcSet: `${LetsGameThumbS} 800w, ${LetsGameThumbL} 1297w`,
+                        sizes:'100vw'
+                    }
+                ]
+            },
+            hub: {
+                img: {
+                    src: LetsGameS,
+                    alt: "Lets Game App. Users Hub"
+                },
+                sources: [
+                    {
+                        media: '(min-width: 0px)',
+                        srcSet: `${LetsGameS} 800w, ${LetsGameL} 1297w`,
+                        sizes:'100vw'
+                    }
+                ]
+            },
+            event: {
+                img: {
+                    src: LetsGameEventS,
+                    alt: "Lets Game App. Event page."
+                },
+                sources: [
+                    {
+                        media: '(min-width: 0px)',
+                        srcSet: `${LetsGameEventS} 800w, ${LetsGameEventL} 1614w`,
+                        sizes:'100vw'
+                    }
+                ]
+            },
+            friends: {
+                img: {
+                    src: LetsGameFriendsS,
+                    alt: "Lets Game App. Friends page"
+                },
+                sources: [
+                    {
+                        media: '(min-width: 0px)',
+                        srcSet: `${LetsGameFriendsS} 800w, ${LetsGameFriendsL} 1416w`,
+                        sizes:'100vw'
+                    }
                 ]
             }
         },
@@ -102,6 +200,83 @@ const assets = {
                         media: '(min-width: 0px)',
                         srcSet: `${JournalZoomS} 800w, ${JournalZoomL} 1565w`,
                         sizes:'100vw'
+                    }
+                ],
+                thumb: [
+                ]
+            },
+            audioControls: {
+                img: {
+                    src: JournalAudioControls,
+                    alt: "A pop out display for controlling audio settings"
+                },
+                sources: []
+            },
+            entry: {
+                img: {
+                    src: JournalEntryS,
+                    alt: "A journal entry page"
+                },
+                sources: [
+                    {
+                        media: '(orientation:portrait)',
+                        srcSet:`${JournalEntryS} 800w, ${JournalEntryL} 1366w`,
+                        sizes: `100vw`
+                    }
+                ]
+            }
+        },
+        FactorySimulator: {
+            img: {
+                src: FactoryS,
+                alt: "A section of the log from the simulator"
+            },
+            sources: {
+                portrait: [
+                    {
+                        media: '(orientation:portrait)',
+                        srcSet:`${FactoryPortraitS} 850w, ${FactoryPortraitL} 1508w`,
+                        sizes: `100vw`
+                    },
+                ],
+                landscape: [
+                    {
+                        media: '(min-width: 0px)',
+                        srcSet: `${FactoryS} 850w, ${FactoryL} 2561w`,
+                        sizes:'100vw'
+                    }
+                ],
+                thumb: [
+                    {
+                        media: '(min-width: 0px)',
+                        srcSet: `${FactoryThumbS} 800w, ${FactoryThumbL} 1130w`,
+                        sizes:'100vw'
+                    }
+                ],
+            },
+            results: {
+                img: {
+                    src: FactoryResultsS,
+                    alt: "Graph traching machine parts per hours over time"
+                },
+                sources: [
+                    {
+                        media: '(orientation:portrait)',
+                        srcSet:`${FactoryResultsS} 800w, ${FactoryResultsL} 1514w`,
+                        sizes: `100vw`
+                    }
+                ]
+            },
+            patterns: {
+                img: {
+                    src: FactoryPatternsS,
+                    alt: "A UML diagram of Factory Simulator"
+                },
+                sources: [
+                    {
+                        media: '(orientation:portrait)',
+                        srcSet:`${FactoryPatternsS} 800w, ${FactoryPatternsL} 1428w`,
+                        sizes: `100vw`
                     }
                 ]
             }
