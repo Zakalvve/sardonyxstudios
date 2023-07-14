@@ -3,7 +3,6 @@ import { useOutletContext } from "react-router-dom";
 import Hero from "../Components/Sections/Hero";
 import Picture from "../Components/UI/Picture";
 import Image from "../Components/UI/Image";
-import { images } from "../Assets/assets";
 import Container from "../Components/UI/Container";
 import { Caption } from "../Components/UI/Text";
 import { siteData } from "../Data/data";
