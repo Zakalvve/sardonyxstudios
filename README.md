@@ -1,4 +1,4 @@
-# [Sardonxy Studios Portfolio Site](www.sardonyx-studios.com)
+# [Sardonxy Studios Portfolio Site](https://www.sardonyx-studios.com)
 I created this site to serve as a platform for promoting myself and my coding abilities. As time goes on I hope to add to and improve this site as my skill improves.
 
 This site was primarily created using [React](https://react.dev/) and [Tailwind CSS](https://tailwindcss.com/).
