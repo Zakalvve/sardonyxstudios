@@ -428,7 +428,7 @@ const assets = {
                 )
             },            
             {
-                name: 'Unity',
+                name: 'unity',
                 icon: ({...props}) => (
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.44 64" fill="#FFF" {...props}>
                         <title>Unity</title>
