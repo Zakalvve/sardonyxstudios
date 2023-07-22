@@ -43,7 +43,7 @@ const data = {
     },
     socials: [
         {
-            text: 'View GitHub profile',
+            text: 'View GitHub Profile',
             href: 'https://github.com/Zakalvve',
             icon: icons.GitHub
         }
@@ -52,23 +52,24 @@ const data = {
         {
             id: 1,
             date: '2023-02-03',
-            name: 'Mihaelas Journal',
+            name: 'Mihaela's Journal',
             image: images.MihaelasJournal,
             CardDescription: ({themeColor, ...props}) => (
                 <div {...props}>
                     <Paragraph>
-                        Have you ever played DnD? If not you should! It's a lot of fun and this project arose from the long running campaign I GM.
+                        Have you ever played DnD? If not, you should! It's a lot of fun and this project 
+                        arose from the long running campaign that I GM.
                     </Paragraph>
                     <Paragraph>
                         I have been running this game for a very dedicated 
-                        group of players and so I was only to happy to take on this project 
-                        on behalf of Michael.
+                        group of players. I was only too happy to take on this project 
+                        on behalf of one of those players, Michael.
                     </Paragraph>
                     <Paragraph>
                         This website was made as an interactive and 
-                        immersive way to read through the in-character jorunal written 
-                        by Michael from the POV of his character Mihaela. It features optional playback of a dynamic soundscape
-                        created which is created in real-time by layering various sound clips and staggering their playback.
+                        immersive way to read through the in character journal written 
+                        by Michael from the POV of his character, Mihaela. It features optional playback of a dynamic soundscape 
+                        which is created in real time by layering various sound clips and staggering their playback.
                     </Paragraph>
                 </div>
             ),
@@ -78,8 +79,7 @@ const data = {
                     Body: ({themeColor, ...props}) => (
                         <div {...props}>
                             <Paragraph>
-                                This project features an immersive soundscape. Sound clips are layered over each other and have their playback staggered by 
-                                an algorithm I wrote myself. This means you can feel as though you are huddled around the campfire in the woods at night. Just watch out for wolves!
+                                This project features an immersive soundscape. Sound clips are layered over each other and have their playback staggered using the algorithm that I wrote: you feel as though you are huddled around the campfire in the woods at night. Just watch out for wolves!
                            </Paragraph>
                         </div>
                     ),
@@ -90,8 +90,8 @@ const data = {
                     Body: ({themeColor, ...props}) => (
                         <div {...props}>
                             <Paragraph>
-                                In order to allow Michael to easily continue to add journal entries the site parses the markdown entries he adds and creates a tree structure for navigation. The markdown is then translated into HTML for rendering. 
-                                This way he need only add his latest entries on GitHub, the site handles the rest and the new pages are created immediately.
+                                In order to allow Michael to easily continue to add journal entries, the site parses the markdown entries he adds and creates a tree structure for navigation. The markdown is then translated into HTML for rendering. 
+                                This way, he need only add his latest entries on GitHub as the site handles the rest and the new pages are created immediately.
                            </Paragraph>
                         </div>
                     ),
@@ -104,19 +104,19 @@ const data = {
         },
         {
             id: 2,
-            name: 'Lets Game',
+            name: 'Let's Game',
             date: '2022-12-29',
             image: images.LetsGame,
             CardDescription: ({themeColor, ...props}) => (
                 <div {...props}>
                     <Paragraph>
-                        Lets Game! is one of my first full-stack projects which I undertook whilst learning ASP.NET.
-                        The idea of the app is to provide board gamers with a way to organise and arrage 
-                        group meetups. 
+                        Let's Game! is one of my first full-stack projects which I undertook whilst learning ASP.NET.
+                        The idea of the app is to provide board gamers with a way to organise and arrange 
+                        group meetups.
                     </Paragraph>
                     <Paragraph>
-                        Users can create polls so they can decide what to play ahead of time.
-                        That means less time debating what to play, more time playing!
+                        Users have the option to create polls, so they can decide what to play ahead of time.
+                        That means less time debating what to play &#8212; more time playing!
                     </Paragraph>
                 </div>
             ),
@@ -126,7 +126,7 @@ const data = {
                     Body: ({themeColor, ...props}) => (
                         <div {...props}>
                             <Paragraph>
-                                Lets Game lets users create an account. Their details are sored in an SQL Server database. Each user gets access to their own "Hub", a dashboard from which to organise meetups with their friends.
+                                Let's Game allows users to create a personal account. Their details are stored securely in an SQL Server database. Each user gets access to their own "Hub" - a dashboard from which to organise meetups with their friends.
                             </Paragraph>
                         </div>
                     ),
@@ -137,9 +137,9 @@ const data = {
                     Body: ({themeColor, ...props}) => (
                         <div {...props}>
                             <Paragraph>
-                                You can created or join events. Events are proposed meetups between a group of friends. Each event allows users to add games to a poll. 
-                                Users can then vote on the poll. This way, on the day of the meetup you will already have an idea of what you want to play. We all lead 
-                                busy lives and just finding the time to meet up at all can be challenging. When we do we want to be playing games not debating what to play!
+                                Users can create or join events. Events are proposed meetups between a group of friends. Each event allows users to add games to a poll. 
+                                Users can then vote in that poll. This way, on the day of the meetup they will already have an idea of what they want to play. We all lead 
+                                busy lives and finding the time to meet with friends can be challenging. When we do, we want to be playing games not debating what to play!
                            </Paragraph>
                         </div>
                     ),
@@ -150,7 +150,7 @@ const data = {
                     Body: ({themeColor, ...props}) => (
                         <div {...props}>
                             <Paragraph>
-                                Lets Game is ultimately a social platform with the express goal of playing boardgames. No social platform would be complete without the ability to add friends and invite them to your events!
+                                Let's Game! is ultimately a social platform with the express goal of playing boardgames. No social platform would be complete without the ability to add friends and invite them to your events.
                             </Paragraph>
                         </div>
                     ),
@@ -169,16 +169,15 @@ const data = {
             CardDescription: ({themeColor, ...props}) => (
             <div {...props}>
                 <Paragraph>
-                    Extreme Snake is a re imagining of the classic video game I first 
+                    Extreme Snake is a re-imagining of the classic video game that I first 
                     played on the Nokia 3410. This version features multi-layered 
-                    levels, powerups, and even local multiplayer so you can go head to 
+                    levels, powerups, and even local multiplayer - you can go head to 
                     head against your friends!
                 </Paragraph>
                 
                 <Paragraph>
-                    I wanted to make a video game as part of my portfolio and chose this
-                    since it has a limited scope. Games can tend to get very work intensive
-                    very quickly if you don't limit the scrope in the soncept stage.
+                    I wanted to make a video game as part of my portfolio and chose to revive the nostalgia of Snake
+                    for a new audience.
                 </Paragraph>
             </div>),
             bodySections: [
@@ -187,8 +186,8 @@ const data = {
                     Body: ({themeColor, ...props}) => (
                         <div {...props}>
                             <Paragraph>
-                                Its the snake you remember but with a few little changes. You compete for food, if you don't keep yourself fed you can shrink as well as grow! 
-                                You can collect powerups in head-to-head mode in order to interfere with your opponents progress. Modern multi-layered levels add a new dimension 
+                                It's the Snake you remember but with a few little changes. You compete for food. If you don't keep yourself fed you can <span className='text-neon-green'>shrink</span> as well as grow! 
+                                You can collect powerups in head-to-head mode to interfere with your opponent's quest for food. Modern multi-layered levels add a new dimension 
                                 to the classic game.
                             </Paragraph>
                         </div>
@@ -200,7 +199,7 @@ const data = {
                     Body: ({themeColor, ...props}) => (
                         <div {...props}>
                             <Paragraph>
-                                Extreme Snake supports local multiplayer so you can battle it out against your friends. You can each choose your snake color before delving into a 
+                                Extreme Snake supports local multiplayer so you can battle it out against your friends. You can each choose your snake's color before delving into a 
                                 mad dash to compete for the limited resources within the level.
                            </Paragraph>
                         </div>
@@ -224,13 +223,14 @@ const data = {
                         patterns and how to select and use them. 
                     </Paragraph>
                     <Paragraph>
-                        I chose to model the systems I saw at the plastic factory I worked at - the base concepts also remind me of factory games. The program exposes an API that
-                        allows the creation of a simulation. 
+                        Without a project in mind to practise these techniques, I was inspired by the systems that I saw at the factory I was working at.
+                        The base concepts also remind me of factory games. The program exposes an API that
+                        allows for the creation of a simulation and the extraction of data from it for analysis.
                     </Paragraph>
                     <Paragraph>
-                        You can specify information about jobs to be placed onto abstract machines, the simulation will then run
-                        the machine and only stall when service is required. The program extracts data from the simulation which can then be imported into Excel in order to help aid 
-                        planning and management decisions.           
+                        You can specify information about the jobs to be placed onto abstract machines. The simulation virtually runs
+                        the machine and only stalls when it runs out of resources, or service is required. The program extracts data from the simulation which can then be imported into Excel in order to aid 
+                        planning and management decisions.   
                     </Paragraph>
                 </div>
             ),
@@ -241,7 +241,7 @@ const data = {
                         <div {...props}>
                             <Paragraph>
                                 Factory Simulator was created to give leaders and planners access to useful and accurate predictive information. 
-                                Whilst a simulation cannot predict the future, it can offer a very fast overlook of how decisions might impact productivity.
+                                Whilst a simulation cannot predict the future, it can offer a very fast overview of how decisions might impact productivity.
                            </Paragraph>
                         </div>
                     ),
@@ -252,9 +252,9 @@ const data = {
                     Body: ({themeColor, ...props}) => (
                         <div {...props}>
                             <Paragraph>
-                                Since this project was undertaken with the express goal of learning more about OOP patterns and SOLID principles 
+                                Since this project was undertaken with the express goal of learning more about OOP patterns and SOLID principles, 
                                 I carefully selected and implemented appropriate patterns to create a perfomant and fast asynchronous API. 
-                                Many simulations can be run concurrently and their data extracted to quickly see the differences between decisions.
+                                Many simulations can be run concurrently and their data extracted to quickly and easily see the differences between decisions.
                             </Paragraph>
                         </div>
                     ),
