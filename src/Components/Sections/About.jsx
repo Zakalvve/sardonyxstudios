@@ -20,14 +20,15 @@ const About = ({themeColor}) => {
                             </Heading>
                             <Paragraph>
                                 Hi! I am David, a programmer with experience in full-stack development. I am just starting out on my journey after rediscovering the joy of coding.
-                                {/* Some details about myself, <span className={`text-${themeColor}`}>passions</span> and coding ability goes here */}
                             </Paragraph>
                             <Paragraph>
-                                I have a passion for code which I picked up in my early years tinkering around with video game code and have since decided to turn that passion into a career. 
+                                I have a passion for programming which I picked up in my early years experimenting with video game code. Since my childhood, I have always had a fascination with codes. Whether they be mathmatical patterns or muscial notation. I have since decided to turn that passion into a career. 
+                            </Paragraph>
+                            <Paragraph>
                                 My focus is on creating modern and beautiful full-stack web applications and indie video games.
                             </Paragraph>
                             <Paragraph>
-                                When I'm not working I enjoy music &#40;thats me playing the guitar!&#41;, creating an immersive tabletop RPG experience for my friends, playing games and going to the gym.
+                                In my downtime, I enjoy playing music; creating an immersive tabletop RPG experience for my friends; playing games and going to the gym.
                             </Paragraph>
                             <ButtonLink to='/about' className='max-w-[50%] mt-6 mx-auto' theme='green' size='medium'>Learn More</ButtonLink>
                     </div>
