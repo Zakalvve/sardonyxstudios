@@ -52,7 +52,7 @@ const data = {
         {
             id: 1,
             date: '2023-02-03',
-            name: 'Mihaela's Journal',
+            name: 'Mihaela&#39;s Journal',
             image: images.MihaelasJournal,
             CardDescription: ({themeColor, ...props}) => (
                 <div {...props}>
@@ -104,7 +104,7 @@ const data = {
         },
         {
             id: 2,
-            name: 'Let's Game',
+            name: 'Let&#39;s Game',
             date: '2022-12-29',
             image: images.LetsGame,
             CardDescription: ({themeColor, ...props}) => (
