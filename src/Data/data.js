@@ -186,7 +186,7 @@ const data = {
                     Body: ({themeColor, ...props}) => (
                         <div {...props}>
                             <Paragraph>
-                                It's the Snake you remember but with a few little changes. You compete for food. If you don't keep yourself fed you can <span className='text-neon-green'>shrink</span> as well as grow! 
+                                It's the Snake you remember but with a few little changes. You compete for food. If you don't keep yourself fed you can <span className='text-neon-blue'>shrink</span> as well as grow! 
                                 You can collect powerups in head-to-head mode to interfere with your opponent's quest for food. Modern multi-layered levels add a new dimension 
                                 to the classic game.
                             </Paragraph>
