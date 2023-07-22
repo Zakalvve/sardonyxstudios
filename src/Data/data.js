@@ -116,7 +116,7 @@ const data = {
                     </Paragraph>
                     <Paragraph>
                         Users have the option to create polls, so they can decide what to play ahead of time.
-                        That means less time debating what to play &#8212; more time playing!
+                        That means less time debating what to play &#8212; and more time playing!
                     </Paragraph>
                 </div>
             ),
