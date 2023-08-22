@@ -29,22 +29,22 @@ const AboutPage = () => {
                         <div className='flex flex-col gap-10'>
                             <div className='flex flex-col gap-6'>
                                 <Caption themeColor={'neon-green'}>Me, myself and coding</Caption>
-                                <Paragraph>I have always been somewhat of a geek so it was only natural that my interests would lead me at some point to programming. 
-                                    I first came across coding when I was a young teenager. We didn't get taught anything like that at school so it was all new to me and - I had to teach myself.
+                                <Paragraph>I have always been somewhat of a geek, so it was only natural that my interests would lead me to programming. 
+                                    I first came across coding when I was a teenager. We didn't get taught anything like that at school - it was all new to me, so I had to teach myself.
                                 </Paragraph>
                                 <Paragraph>
                                     My first language was C++. I started by exploring with video game creation using the Dark GDK. I was determined to learn more about 
-                                    data structure, control patterns, memory management, software architechture. When I left school I decided to take up programming at college enrolling on a games programming course. 
+                                    data structures, control patterns, memory management and software architecture. When I left school, I decided to take up programming at college, enrolling on a games programming course. 
                                     After acing college, which focused on visual basic, I wanted to progress and learn games programming at university.
                                 </Paragraph>
                                 <Paragraph>
-                                    Unfortunately, due to a variety of factors I was unable to pursure my dream. I still continued to write code and to learn more about programming but I began my career in a very differnt line of work. 
-                                    Eventually I ended up becoming in charge of a large team of people and it was around this time that I reflected on my dream to be a programmer. At this point there were two paths.
+                                    Unfortunately, due to a variety of factors, I was unable to pursure my dream. I still continued to write code and to learn more about programming, but I began my career in a very different line of work. 
+                                    I ended up leading a large team of people but it was around this time that I began to reflect on my dream to be a programmer. At this point, two distinct paths opened up for me and I wanted to make sure I chose the right one for myself.
                                 </Paragraph>
                                 <Paragraph>
-                                    I decided to step down from my position and re-learn programming with the aim of seeking employment. In 2022 I took up courses on codecademy. 
-                                    I have learned about a wide range of skills both theoretical and practical. Since I have no degree my aim has been to try and create a portfolio that speaks for itself.
-                                    I have a long way to go on my coding journey but no matter where it takes me I am glad that I made the decision to pursure what I love.
+                                    I decided to step down from my position, re-learn programming and pursue my dream with the aim of seeking full-time employment. In 2022, I took up courses on Codecademy with this goal in mind. 
+                                    I have learned about a wide range of skills both theoretical and practical. Since I have no degree, my aim has been to try and create a portfolio that speaks for itself.
+                                    I have a long way to go on my coding journey, but no matter where it takes me I am glad that I made the decision to pursure what I love.
                                 </Paragraph>
                             </div>
                         </div>

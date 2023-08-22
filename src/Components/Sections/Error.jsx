@@ -7,7 +7,7 @@ const Error = () => {
                 <Container>
                     <div className='flex min-h-screen flex-col items-center justify-center text-center'>
                         <Caption themeColor='neon-red'>Oops!</Caption>
-                        <Paragraph>Something went wrong. Consider submitting an <a className='text-neon-green underline cursor-pointer' href="https://github.com/Zakalvve/sardonyxstudios/issues">issue</a> and I'll try and get on it.</Paragraph>
+                        <Paragraph>Something went wrong. Consider submitting an <a className='text-neon-green underline cursor-pointer' href="https://github.com/Zakalvve/sardonyxstudios/issues">issue</a> on GitHub and I'll get straight onto it.</Paragraph>
                     </div>
                 </Container>
         </section>
