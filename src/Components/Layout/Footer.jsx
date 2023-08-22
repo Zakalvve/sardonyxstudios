@@ -23,7 +23,7 @@ const Footer = React.forwardRef((props,ref) => {
                     ))}
                 </nav>
             </Container>
-            <hr className="h-px border-0 bg-gradient-to-r from-transparent via-space-400 to-transparent" />
+            <hr className="h-px border-0 bg-gradient-to-r from-transparent via-space-400 to-transparent"/>
             <Container>
                 <div className='grid grid-cols-1 items-center justify-center gap-6 py-12 lg:grid-cols-3'>
                     <div className='flex text-space-100 justify-center gap-x-6 lg:order-last lg:justify-end'>

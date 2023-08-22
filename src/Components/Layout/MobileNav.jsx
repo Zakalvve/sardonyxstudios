@@ -87,7 +87,7 @@ const MobileNav = ({isOpen, toggleOpen, links}) => {
     );
 }
 
-const MobileNavOperlay = ({ isOpen, toggleOpen,}) => {    
+const MobileNavOverlay = ({ isOpen, toggleOpen,}) => {    
     return (
         <AnimatePresence>
             {isOpen && (
@@ -199,7 +199,7 @@ const MobileNavToggle = ({isOpen, toggleOpen}) => {
       );
 }
 
-MobileNav.Overlay = MobileNavOperlay;
+MobileNav.Overlay = MobileNavOverlay;
 MobileNav.Toggle = MobileNavToggle;
 
 export default MobileNav;
