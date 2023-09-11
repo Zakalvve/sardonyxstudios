@@ -53,6 +53,13 @@ import FactoryResultsL from './factor-simulator-results-1514w.webp';
 import FactoryPatternsS from './factor-simulator-patterns-800w.webp';
 import FactoryPatternsL from './factor-simulator-patterns-1428w.webp';
 
+import BordonHillsL from './bordon-hills-1920w.webp';
+import BordonHillsS from './bordon-hills-1000w.webp';
+import BordonHillsPortraitL from './bordon-hills-portrait-1300w.webp';
+import BordonHillsMapL from './bordon-hills-map-1920w.webp';
+import BordonHillsMapS from './bordon-hills-map-1000w.webp';
+import BordonHillsProcessesL from './bordon-hills-processes-1920w.webp';
+import BordonHillsProcessesS from './bordon-hills-processes-1000w.webp';
 
 //images: object
 //contains the images used on the site and the data struture used to ensure they are fully responsive
@@ -87,8 +94,6 @@ const assets = {
                         sizes: '(max-width: 1920px) 1080w, 2238w'
                     }
                 ],
-                thumb: [
-                ]
             },
             multiplayer: {
                 img: {
@@ -206,8 +211,6 @@ const assets = {
                         sizes:'100vw'
                     }
                 ],
-                thumb: [
-                ]
             },
             audioControls: {
                 img: {
@@ -281,6 +284,54 @@ const assets = {
                         media: '(orientation:portrait)',
                         srcSet:`${FactoryPatternsS} 800w, ${FactoryPatternsL} 1428w`,
                         sizes: `100vw`
+                    }
+                ]
+            }
+        },
+        BordonHill: {
+            img: {
+                src: BordonHillsS,
+                alt: 'Screenshot of bordon hills website homepage'
+            },
+            sources: {
+                portrait: [
+                    {
+                        media: '(orientation:portrait)',
+                        srcSet:`${BordonHillsPortraitL} 800w`,
+                        sizes: `100vw`
+                    },
+                ],
+                landscape: [
+                    {
+                        media: '(min-width: 0px)',
+                        srcSet: `${BordonHillsS} 400w, ${BordonHillsL} 1000w`,
+                        sizes:'100vw'
+                    }
+                ],
+            },
+            map: {
+                img: {
+                    src :BordonHillsMapS,
+                    alt: 'Picture of google maps embed in website'
+                },
+                sources: [
+                    {
+                        media: '(min-width: 0px)',
+                        srcSet: `${BordonHillsMapS} 800w, ${BordonHillsMapL} 1920w`,
+                        sizes:'100vw'
+                    }
+                ]
+            },
+            processes: {
+                img: {
+                    src : BordonHillsProcessesS,
+                    alt: 'Image of the processes section of the website'
+                },
+                sources: [
+                    {
+                        media: '(min-width: 0px)',
+                        srcSet: `${BordonHillsProcessesS} 800w, ${BordonHillsProcessesL} 1920w`,
+                        sizes:'100vw'
                     }
                 ]
             }
