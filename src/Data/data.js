@@ -264,6 +264,64 @@ const data = {
             skills: ['c#', '.net'],
             github: 'https://github.com/Zakalvve/FactorySimulator',
             site: ''
+        },
+        {
+            id: 5,
+            name: "Bordon Hill Nurseries",
+            date: '2023-09-11',
+            image: images.BordonHill,
+            CardDescription: ({themeColor, ...props}) => (
+                <div {...props}>
+                    <Paragraph>
+                        The website I made for Bordon Hill Nurseries was one of my first commissions. They wanted their old website replaced by something a bit more modern.
+                    </Paragraph>
+                    <Paragraph>Bordon Hill Nurseries specialise in the large scale production of bedding plants from seed to plugs. They wanted their site to be functional and practical - they anticipated that the site would be used by potential customers as well as the general public.</Paragraph>
+                    <Paragraph>I also wanted to ensure the site could be quickly added to or changed quickly and without much work. To achieve this I crated a simple data API from which much of the site is defined including its routing, sitemap and content.</Paragraph>
+                </div>
+            ),
+            bodySections: [
+                {
+                    title: 'Features',
+                    Body: (themeColor, ...props) => (
+                        <div className='flex flex-col gap-4' {...props}>
+                            <Paragraph>
+                                There were several features requested to be included across the website by Bordon Hill Nurseries. They wanted to offer users a way to easily send emails to a number of company email addresses. This feature was added to the contact form using a simple drop down.
+                            </Paragraph>
+                            <Paragraph>
+                                They wanted an interactive map so that users could see where they were based easily. I used the Google Maps API to achieve this functionality adding the finished map to the contact page as well.
+                            </Paragraph>
+                            <Paragraph>
+                                To help people looking for work at the nursery they wanted to provide a download link for their application form. This way, potential recruits could easily download the form and send it back to the given email.
+                            </Paragraph>
+                        </div>
+                    ),
+                    image: images.BordonHill.map
+                },
+                {
+                    title: 'Extensions',
+                    Body: (...props) => (
+                        <div className='flex flex-col gap-4' {...props}>
+                            <Paragraph>
+                                I created a data API so that web pages could be added easily by modifying a single site-config file. The site map; routing of the site; images used across the various pages and information such as phone numbers and emails are all stored in a single centalised location. Updating any of these variables automatically updates every occurance across the site.
+                            </Paragraph>
+                            <Paragraph>
+                                In addition, the routing is created dynamically based on an array of page data exported from site-config. Adding a new webpage is as simple as adding another entry to that array. All the routing is handled for you and the navigation bars in the header/footer respond dynamically.
+                            </Paragraph>
+                            <Paragraph>
+                                Finally when you want to pass custom data to a page you can add that data in one of the properties of the page data. It is then automatically loaded by the route when the user navigates to it.
+                            </Paragraph>
+                            <Paragraph>
+                                I added these features so that once the site was complete, the folks at Bordon Hills would be able to continue to customise the site without having to take the time to learn how the whole thing works.
+                            </Paragraph>
+                        </div>
+                    ),
+                    image: images.BordonHill.processes
+                }
+
+            ],
+            skills: ['js','react','html', 'css'],
+            github: '',
+            site: ''
         }
     ]
 }
