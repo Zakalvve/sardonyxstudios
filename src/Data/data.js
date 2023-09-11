@@ -298,7 +298,7 @@ const data = {
                     image: images.BordonHill.map
                 },
                 {
-                    title: 'Extension',
+                    title: 'Extensions',
                     Body: (...props) => (
                         <div className='flex flex-col gap-4' {...props}>
                             <Paragraph>
