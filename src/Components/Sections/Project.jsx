@@ -8,6 +8,8 @@ import { shuffleArray } from '../../Library/Utils';
 import Pill from '../UI/Pill';
 import { useNavigate } from 'react-router-dom';
 import Picture from '../UI/Picture';
+import UnityGameEmbed from '../UnityGameEmbed';
+import GamePlayer from '../GamePlayer';
 
 const Project = ({project}) => {
     const navigate = useNavigate();
@@ -62,6 +64,13 @@ const Project = ({project}) => {
                             );
                         })}
                     </div>
+
+                    {project.demo && (
+                        <div className='w-full flex flex-col w-full pt-8 gap-10 text-center lg:gap-8 mt-16'>
+                            <Caption themeColor={'neon-blue'}>{project.demo.title}</Caption>
+                            <GamePlayer config={project.demo.config}/>
+                        </div>
+                    )}
 
                     <div id='links' className='pt-12 flex flex-col gap-2'>
                         {project.github && (

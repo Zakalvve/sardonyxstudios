@@ -1,5 +1,6 @@
 import {icons, images} from '../Assets/assets'
 import { Paragraph } from '../Components/UI/Text';
+
 //a quick and temporary way of retrieving, organising and editing data
 const data = {
     siteData: {
@@ -207,6 +208,15 @@ const data = {
                     image: images.ExtremeSnake.multiplayer
                 }
             ],
+            demo: {
+                title: "Extreme Snake Demo",
+                config: {
+                    loaderUrl: "/extreme-snake-demo/Build/webgl-build.loader.js",
+                    dataUrl: "/extreme-snake-demo/Build/webgl-build.data",
+                    frameworkUrl: "/extreme-snake-demo/Build/webgl-build.framework.js",
+                    codeUrl: "/extreme-snake-demo/Build/webgl-build.wasm",
+                }
+            },
             skills: ['c#','unity', '.net'],
             github: '',
             site: ''
