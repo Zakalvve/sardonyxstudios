@@ -8,7 +8,6 @@ import { shuffleArray } from '../../Library/Utils';
 import Pill from '../UI/Pill';
 import { useNavigate } from 'react-router-dom';
 import Picture from '../UI/Picture';
-import UnityGameEmbed from '../UnityGameEmbed';
 import GamePlayer from '../GamePlayer';
 
 const Project = ({project}) => {
