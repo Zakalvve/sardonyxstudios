@@ -18,7 +18,7 @@ const NavBar = ({isBackgroundTransparent = true}) => {
         setIsOpen(!isOpen);
     }
 
-    const scrolledDownOnePage = scrollPos > windowHeight - 1;
+    const scrolledDownOnePage = scrollPos > windowHeight;
     const isBackgroundBlurred = !isBackgroundTransparent || scrolledDownOnePage || isOpen;
 
     const links = siteLinks('about', 'projects');
