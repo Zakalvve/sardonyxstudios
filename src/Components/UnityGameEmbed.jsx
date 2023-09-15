@@ -1,20 +1,26 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Unity, useUnityContext } from 'react-unity-webgl';
 import { Paragraph } from './UI/Text';
 
 const UnityGameEmbed = ({config, className, children}) => {
-    const { unityProvider, isLoaded, loadingProgression, requestFullscreen } = useUnityContext(config);
+    const { unityProvider, isLoaded, loadingProgression, requestFullscreen, unload } = useUnityContext(config);
     const loadingPercentage = Math.round(loadingProgression * 100);
 
     const toggleFullscreen = () => {
         requestFullscreen(true);
     }
 
+    useEffect(() => {        
+        return () => {            
+            if (isLoaded) unload();
+        }
+    }, [unload, isLoaded]);
+
     return (
         <>
             {!isLoaded && (
                 // We'll conditionally render the loading overlay if the Unity
-                // Application is not loaded.
+                // Application is not yet loaded.
                 <div className="absolute inset-0 z-50 flex flex-col justify-center">
                     <Paragraph className='text-white'>Loading... ({loadingPercentage}%)</Paragraph>
                 </div>
