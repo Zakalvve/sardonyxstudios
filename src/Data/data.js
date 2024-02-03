@@ -331,7 +331,7 @@ const data = {
             ],
             skills: ['js','react','html', 'css'],
             github: '',
-            site: ''
+            site: 'https://www.bordonhill.com/'
         }
     ]
 }
